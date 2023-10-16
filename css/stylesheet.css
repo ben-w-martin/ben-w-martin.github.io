@@ -54,11 +54,7 @@ section {
     z-index: 3;
 }
 
-.logo {
-    flex-wrap: wrap;
-}
-
-#banner .logo {
+.color-bars {
     width: 100%;
 }
 
@@ -79,7 +75,7 @@ nav {
 }
 
 nav a {
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 20px;
     font-weight: 300;
 }
@@ -146,7 +142,7 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 
 .link-style:link {
     background-color: transparent;
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 48px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -178,10 +174,21 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
     min-width: 100px;
 }
 
-/*.main .name {*/
-/*    !*font-weight: 800;*!*/
-/*}*/
+.mini-bars-right {
+    position: sticky;
+    display: flex;
+    top: 50px;
+    /*left: 80px;*/
+    right: 0%;
+    float: right;
+    justify-content: left;
+}
 
+.mini-bars-left {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
 .main,
 article {
     margin-left: 60px;
@@ -200,8 +207,8 @@ article {
     background-repeat: repeat-y;
 }
 
-article h2{
-    color:#FA862D
+article h2 {
+    color:#FA862D;
 }
 
 /* .meet-the-team {

@@ -110,7 +110,6 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 /*	Links	*/
 
 .link-style:link,
-.menu a:link,
 .contact:link,
 .crumb a:link {
     color: #FA862D;
@@ -119,7 +118,6 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 }
 
 .link-style:hover,
-.menu:hover,
 .contact:hover,
 .crumb a:hover {
     color: #FA862D;
@@ -127,14 +125,12 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 }
 
 .link-style:active,
-.menu:active,
 .contact:active,
 .crumb a:active {
     color: #FA862D;
 }
 
 .link-style:visited ,
-.menu a:visited ,
 .contact:visited ,
 .crumb a:visited {
     text-decoration: none;
@@ -175,20 +171,18 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
     min-width: 100px;
 }
 
-.mini-bars-right {
-    position: sticky;
-    display: flex;
-    top: 50px;
-    /*left: 80px;*/
-    right: 0%;
-    float: right;
-    justify-content: left;
-}
+/*.mini-bars-right {*/
+/*    position: sticky;*/
+/*    top: 70px;*/
+/*    right: 0%;*/
+/*    float: right;*/
+/*}*/
 
 .mini-bars-left {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
+    position: sticky;
+    bottom: 50px;
+    left: 0%;
+    float: left;
 }
 .main,
 article {
@@ -261,21 +255,23 @@ article span {
 .menu {
     position: sticky;
     display: flex;
-    top: 60px;
-    left: 80px;
-    width: 280px;
+    top: 250px;
+    right: 0px;
+    width: 160px;
     float: right;
-    justify-content: left;
+    justify-content: right;
+    background-color: #FFF5FAC6;
     border-radius: 10px;
+    color:#FA862D;
 }
 
-.menu a {
-    font-size: 18px;
+.menu p {
     padding-right: 5px;
 }
 
 .menu-items {
     list-style-type: none;
+    padding: 15px;
 }
 
 /*	Footer	*/
@@ -288,7 +284,6 @@ footer {
 }
 
 .contact {
-
     padding: 30px 60px 30px 60px;
 }
 

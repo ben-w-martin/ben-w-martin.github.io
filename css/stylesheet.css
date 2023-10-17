@@ -206,20 +206,6 @@ article h2 {
     color:#FA862D;
 }
 
-/*.bio {*/
-/*    background-color: #fff5fa;*/
-/*    border-radius: 10px;*/
-/*    padding: 10px 20px;*/
-/*}*/
-
-/* .meet-the-team {
-	flex-wrap: wrap;
-} */
-
-.meet-the-team h2 {
-    color: #39071fca;
-}
-
 .main h1,
 .main h2,
 .main h3,
@@ -248,6 +234,10 @@ article span {
 
 .indent-dbl {
     padding-left: 120px;
+}
+
+.eduList li::marker {
+    color: #FA862D;
 }
 
 /*	menu	*/

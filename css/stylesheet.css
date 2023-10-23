@@ -98,9 +98,9 @@ nav a {
 .crumb a::after {               /*Adds symbol between nav items*/
     display: inline-block;
     color: #FA862D;
-    content: '|';
-    font-size: 30px;
-    padding: 0 3px;
+    content: '*';
+    font-size: 16px;
+    padding-left: 18px;
 }
 
 nav li:last-child a::after {    /*Removes last dash in nav bar*/
@@ -109,58 +109,42 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 
 /*	Links	*/
 
-.link-style:link,
-.contact:link,
 .crumb a:link {
     color: #FA862D;
     text-decoration: none;
 
 }
 
-.link-style:hover,
-.contact:hover,
 .crumb a:hover {
     color: #FA862D;
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 .link-style:active,
-.contact:active,
 .crumb a:active {
     color: #FA862D;
 }
 
 .link-style:visited ,
-.contact:visited ,
 .crumb a:visited {
     text-decoration: none;
     color: #FA862D;
 }
 
-.link-style:link {
-    background-color: transparent;
-    font-family: monospace, sans-serif;
-    font-size: 48px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FA862D;
-}
-
-.link-style:hover {
-    text-decoration: underline;
-}
-
-.link-style:active {
-    color: #DBDBDB;
-}
-
-.link-style:visited {
-    color: #DBDBDB;
-}
-
 #crumb-current {					/*Displays current page as underlined navigation*/
-    text-decoration: underline;
     color: #FF4BAD;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.project-link:visited {
+    color: inherit;
+}
+
+.project-link:link {
+    text-decoration: none;
 }
 
 /*	Main*/

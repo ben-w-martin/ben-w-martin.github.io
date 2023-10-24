@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
 </head>
 <body>
-<script src="js/portfolio.js"></script>
+
 <div id="banner">
     <img class="color-bars" src="img/color-bars3.png" alt="Benjamin Martin">
 </div>
@@ -30,10 +30,11 @@
     </ul>
 </nav>
 <div class="dropdown">
-    <img onclick="dropMenu()" class="dropbtn mini-bars-right" src="img/mini-bars-right.png">
-    <div id="myDropdown" class="dropdown-content">
-        <p class="menu-items">CONTACT ME:<br>Phone: 434-944-5520 Email: ben-w-martin17<br>@gmail.com
-        </p>
+    <button onfocus="dropMenu()" class="dropbtn dropdown">CONTACT</button>
+
+    <div id="myDropdown" class="dropdown-container">
+        <p>Phone: <span> <a class="dropdown-items" href="tel:+4349445520">434-944-5520</a></span> Email: <span>
+                <a class="dropdown-items" href="mailto::ben.w.martin17@gmail.com">ben.w.martin17<br>@gmail.com</a></span></p>
     </div>
 </div>
 <!--	Main   -->
@@ -65,5 +66,6 @@
 <img class="mini-bars-left" src="img/mini-bars-left.png">
 <footer>
 </footer>
+<script src="js/portfolio.js"></script>
 </body>
 </html>

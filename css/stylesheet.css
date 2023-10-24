@@ -24,6 +24,7 @@ h2 {
     font-size: 30px;
 }
 
+.project-link,
 h3 {
     font-size: 25px;
 }
@@ -64,11 +65,8 @@ section {
     position: sticky;
 }
 
-.menu,
+.dropdown,
 nav {
-    /*font-family: 'PT Serif', serif;*/
-    /*font-size: 24px;*/
-    /*font-weight: 100;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -132,10 +130,9 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 }
 
 #crumb-current {					/*Displays current page as underlined navigation*/
-    color: #FF4BAD;
 }
 
-.project-link:hover {
+.main .project-link:hover {
     text-decoration: underline;
 }
 
@@ -224,9 +221,9 @@ article span {
     color: #FA862D;
 }
 
-/*	menu	*/
+/*	dropdown	*/
 
-.menu {
+.dropdown {
     position: sticky;
     display: flex;
     top: 250px;
@@ -239,8 +236,14 @@ article span {
     color:#FA862D;
 }
 
-.menu p {
+.dropdown p {
     padding-right: 5px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    box-shadow: 5px 5px;
+    color: black;
+
 }
 
 .menu-items {

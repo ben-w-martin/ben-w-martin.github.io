@@ -3,7 +3,6 @@
 function dropMenu() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         // Check if the clicked element or its parent is a .dropdown-container

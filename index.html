@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
 </head>
 <body>
-<script src="js/portfolio.js"></script>
+
 <div id="banner">
     <img class="color-bars" src="img/color-bars3.png" alt="Benjamin Martin">
 </div>
@@ -29,15 +29,18 @@
         <li class="crumb"><a href="projects.html">Projects</a></li>
     </ul>
 </nav>
-<div class="menu">
-    <img class="mini-bars-right" src="img/mini-bars-right.png">
-    <p class="menu-items">CONTACT ME:<br>Phone: 434-944-5520 Email: ben-w-martin17<br>@gmail.com
-    </p>
+<div class="dropdown">
+    <button onclick="dropMenu()" class="dropbtn dropdown">CONTACT</button>
+    <div id="myDropdown" class="dropdown-container">
+        <p>Phone: <span> <a class="dropdown-items" href="tel:+4349445520">434-944-5520</a></span> Email: <span>
+                <a class="dropdown-items"
+                   href="mailto::ben.w.martin17@gmail.com">ben.w.martin17<br>@gmail.com</a></span></p>
+    </div>
 </div>
 <!--	Main   -->
 
 <div class="main">
-    <img class="benjamin-martin" src="img/benjamin-martin.png">
+    <img class="decorative-banner" src="img/benjamin-martin.png" alt="Benjamin Martin">
     <h3>Bio</h3>
     <p>
         Full Stack Web Developer. Languages include HTML, CSS, JavaScript and Java. Experience with
@@ -63,5 +66,6 @@
 <img class="mini-bars-left" src="img/mini-bars-left.png">
 <footer>
 </footer>
+<script src="js/portfolio.js"></script>
 </body>
 </html>

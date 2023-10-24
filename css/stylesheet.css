@@ -24,6 +24,7 @@ h2 {
     font-size: 30px;
 }
 
+.project-link,
 h3 {
     font-size: 25px;
 }
@@ -64,11 +65,8 @@ section {
     position: sticky;
 }
 
-.menu,
+.dropdown,
 nav {
-    /*font-family: 'PT Serif', serif;*/
-    /*font-size: 24px;*/
-    /*font-weight: 100;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -132,10 +130,9 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 }
 
 #crumb-current {					/*Displays current page as underlined navigation*/
-    color: #FF4BAD;
 }
 
-.project-link:hover {
+.main .project-link:hover {
     text-decoration: underline;
 }
 
@@ -149,10 +146,11 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 
 /*	Main*/
 
-.benjamin-martin {
+.decorative-banner {
     max-width: 300px;
     height: auto;
     min-width: 100px;
+    position: ;
 }
 
 /*.mini-bars-right {*/
@@ -224,42 +222,61 @@ article span {
     color: #FA862D;
 }
 
-/*	menu	*/
+/*	dropdown	*/
 
-.menu {
+.dropdown { /* div */
+    margin-top: 10px;
     position: sticky;
     display: flex;
-    top: 250px;
-    right: 0px;
-    width: 160px;
+    top: 40px;
+    width: 23%;
+    max-width: 200px;
+    height: 60px;
     float: right;
-    justify-content: right;
-    background-color: #FFF5FAC6;
+    background-color:transparent;
     border-radius: 10px;
     color:#FA862D;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.menu p {
+.dropbtn { /* button */
+    justify-content: left;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 245, 250, 1);
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+}
+
+.dropdown-container {
+    background-color: rgba(255, 245, 250, 1);
+    border-radius: 0 0 10px 10px;
+    list-style-type: none;
+    width: 100%;
+    margin-top: 0px;
+    padding: 0 0 15px 15px ;
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
+
+.dropdown-items {
+    text-decoration: underline;
+    color: #FA862D;
+}
+
+.dropdown p {
     padding-right: 5px;
 }
 
-.menu-items {
-    list-style-type: none;
-    padding: 15px;
+.show {
+    display:block;
 }
-
 /*	Footer	*/
-
-footer {
-    display: flex;
-    font-size: 18px;
-    color: #FF4BAD;
-    justify-content: center;
-}
-
-.contact {
-    padding: 30px 60px 30px 60px;
-}
 
 /*	BLOG	*/
 
@@ -270,7 +287,6 @@ footer {
 
 .preview-img {
     height: 250px;
-    /* border-radius: */
     padding-right: 60px;
 }
 

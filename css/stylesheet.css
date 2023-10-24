@@ -146,7 +146,7 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 
 /*	Main*/
 
-.benjamin-martin {
+.decorative-banner {
     max-width: 300px;
     height: auto;
     min-width: 100px;
@@ -245,14 +245,14 @@ article span {
     font-size: 24px;
     cursor: pointer;
     border: none;
-    background-color: rgba(255, 245, 250, 0.71);
+    background-color: rgba(255, 245, 250, 1);
     width: 100%;
     height: 100%;
     padding-left: 15px;
 }
 
 .dropdown-container {
-    background-color: rgba(255, 245, 250, 0.71);
+    background-color: rgba(255, 245, 250, 1);
     border-radius: 0 0 10px 10px;
     list-style-type: none;
     width: 100%;
@@ -260,7 +260,7 @@ article span {
     padding: 0 0 15px 15px ;
     display: none;
     position: absolute;
-    top: 70px;
+    top: 60px;
     z-index: 1;
 }
 
@@ -273,22 +273,9 @@ article span {
     padding-right: 5px;
 }
 
-.dropdown:hover,
-.dropdown:focus,
-.dropbtn:hover,
-.dropbtn:focus {
+.show {
+    display:block;
 }
-
-.dropbtn:focus{
-    border-radius: 10px 10px 0 0;
-}
-
-.dropbtn:active {
-    background-color: #FFF5FAC6;
-}
-
-
-.show {display:block;}
 /*	Footer	*/
 
 /*	BLOG	*/

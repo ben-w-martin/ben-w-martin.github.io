@@ -5,8 +5,8 @@ function dropMenu() {
 }
 
 // window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn' ) && !event.target.matches('.dropdown-content')) {
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
+//     if (!event.target.matches('.dropbtn' )) {
+//         var dropdowns = document.getElementsByClassName("dropdown-container");
 //         var i;
 //         for (i = 0; i < dropdowns.length; i++) {
 //             var openDropdown = dropdowns[i];
@@ -20,7 +20,7 @@ function dropMenu() {
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         // Close all dropdowns except for the clicked one
-        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var dropdowns = document.getElementsByClassName("dropdown-container");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
@@ -30,8 +30,8 @@ window.onclick = function(event) {
         }
     }
 };
-
+//
 // Prevent the menu from closing when clicking inside the .dropdown-content
-document.querySelector('.dropdown-content').addEventListener('click', function(event) {
+document.querySelector('.dropdown-container').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent the click event from bubbling up to the window.onclick handler
 });

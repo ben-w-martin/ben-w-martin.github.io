@@ -15,7 +15,7 @@ body {
 /*	Text Styles */
 
 h1 {
-    font-family: BD geminis;
+    font-family: monospace;
     font-size: 48px;
     color: #FF4BAD;
 }
@@ -150,7 +150,6 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
     max-width: 300px;
     height: auto;
     min-width: 100px;
-    position: ;
 }
 
 /*.mini-bars-right {*/
@@ -163,7 +162,7 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
 .mini-bars-left {
     position: sticky;
     bottom: 50px;
-    left: 0%;
+    left: 0;
     float: left;
 }
 .main,
@@ -173,7 +172,7 @@ article {
     padding: 2% 20% 2% 10%;
     background-color: rgba(164,164,164,0.10);
     color: #39071fca;
-    background-image: url("/img/noise-article.png");
+    background-image: url("../img/noise-article.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
@@ -256,7 +255,7 @@ article span {
     border-radius: 0 0 10px 10px;
     list-style-type: none;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0 0 15px 15px ;
     display: none;
     position: absolute;

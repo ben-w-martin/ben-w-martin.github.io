@@ -4,34 +4,17 @@ function dropMenu() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn' )) {
-//         var dropdowns = document.getElementsByClassName("dropdown-container");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//             var openDropdown = dropdowns[i];
-//             if (openDropdown.classList.contains('show')) {
-//                 openDropdown.classList.remove('show');
-//             }
-//         }
-//     }
-// }
-
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
-        // Close all dropdowns except for the clicked one
+        // Check if the clicked element or its parent is a .dropdown-container
         var dropdowns = document.getElementsByClassName("dropdown-container");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show') && event.target !== openDropdown) {
-                openDropdown.classList.remove('show');
+        for (var i = 0; i < dropdowns.length; i++) {
+            var dropdown = dropdowns[i];
+            if (dropdown.classList.contains('show') &&
+                !dropdown.contains(event.target) &&
+                !event.target.matches('.dropdown-content')) {
+                dropdown.classList.remove('show');
             }
         }
     }
 };
-//
-// Prevent the menu from closing when clicking inside the .dropdown-content
-document.querySelector('.dropdown-container').addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent the click event from bubbling up to the window.onclick handler
-});

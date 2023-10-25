@@ -93,7 +93,7 @@ nav a {
     background-color: transparent;
 }
 
-.crumb a::after {               /*Adds symbol between nav items*/
+.crumb a::after { /*Adds symbol between nav items*/
     display: inline-block;
     color: #FA862D;
     content: '*';
@@ -101,7 +101,7 @@ nav a {
     padding-left: 18px;
 }
 
-nav li:last-child a::after {    /*Removes last dash in nav bar*/
+nav li:last-child a::after { /*Removes last dash in nav bar*/
     content: none;
 }
 
@@ -123,13 +123,13 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
     color: #FA862D;
 }
 
-.link-style:visited ,
+.link-style:visited,
 .crumb a:visited {
     text-decoration: none;
     color: #FA862D;
 }
 
-#crumb-current {					/*Displays current page as underlined navigation*/
+#crumb-current { /*Displays current page as underlined navigation*/
 }
 
 .main .project-link:hover {
@@ -165,12 +165,13 @@ nav li:last-child a::after {    /*Removes last dash in nav bar*/
     left: 0;
     float: left;
 }
+
 .main,
 article {
     margin-left: 60px;
     margin-right: 60px;
     padding: 2% 20% 2% 10%;
-    background-color: rgba(164,164,164,0.10);
+    background-color: rgba(164, 164, 164, 0.10);
     color: #39071fca;
     background-image: url("../img/noise-article.png");
     background-size: contain;
@@ -184,7 +185,7 @@ article {
 }
 
 article h2 {
-    color:#FA862D;
+    color: #FA862D;
 }
 
 .main h1,
@@ -232,9 +233,9 @@ article span {
     max-width: 200px;
     height: 60px;
     float: right;
-    background-color:transparent;
+    background-color: transparent;
     border-radius: 10px;
-    color:#FA862D;
+    color: #FA862D;
     align-items: center;
     justify-content: space-around;
 }
@@ -256,7 +257,7 @@ article span {
     list-style-type: none;
     width: 100%;
     margin-top: 0;
-    padding: 0 0 15px 15px ;
+    padding: 0 0 15px 15px;
     display: none;
     position: absolute;
     top: 60px;
@@ -273,8 +274,45 @@ article span {
 }
 
 .show {
-    display:block;
+    display: block;
 }
+
+/*  Inquiry area  */
+
+#inquiry-container {
+    width: 100%;
+}
+
+.inquiry {
+    width: 100%;
+}
+
+.inquiry input {
+    max-height: 50px;
+}
+
+.inquiry input,
+.inquiry textarea {
+    border: none;
+    background-color: rgba(125, 125, 125, 0.17);
+    border-radius: 5px;
+}
+
+.inquiry textarea {
+    min-width: 220px;
+    max-width: 500px;
+    max-height: 200px;
+    min-height: 100px;
+    overflow:hidden;
+}
+
+.inquiry input:focus,
+.inquiry textarea:focus {
+    border: none;
+}
+
+
+
 /*	Footer	*/
 
 /*	BLOG	*/

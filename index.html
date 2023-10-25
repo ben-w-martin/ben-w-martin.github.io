@@ -62,21 +62,24 @@
         workload, and pace.
     </p>
     <br><br>
-    <div class="form-container">
-    <form>
+    <div id="inquiry-container">
+    <form class="inquiry">
         <h3>Send an Inquiry</h3>
         <label for="firstName">First name:</label><br>
-        <input type="text" id="firstName" name="firstName"><br>
+        <input type="text" id="firstName" name="firstName" required><br>
         <label for="lastName">Last name:</label><br>
-        <input type="text" id="lastName" name="lastName"><br>
+        <input type="text" id="lastName" name="lastName"required><br>
+        <label for="company">Company:</label><br>
+        <input type="text" id="company" name="company"><br>
         <label for="email">Email address:</label><br>
-        <input type="text" id="email" name="email"><br>
+        <input type="text" id="email" name="email" required><br>
         <label for="message">Message:</label><br>
-        <textarea for="message" name="message"></textarea><br>
+        <textarea id="message" name="message" required></textarea><br>
         <input type="submit" value="Submit">
+
     </form>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br>
 </div>
 <img class="mini-bars-left" src="img/mini-bars-left.png">
 <footer>

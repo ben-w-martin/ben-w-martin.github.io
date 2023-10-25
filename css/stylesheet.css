@@ -132,7 +132,7 @@ nav li:last-child a::after { /*Removes last dash in nav bar*/
 #crumb-current { /*Displays current page as underlined navigation*/
 }
 
-.main .project-link:hover {
+main .project-link:hover {
     text-decoration: underline;
 }
 
@@ -166,7 +166,7 @@ nav li:last-child a::after { /*Removes last dash in nav bar*/
     float: left;
 }
 
-.main,
+main,
 article {
     margin-left: 60px;
     margin-right: 60px;
@@ -188,10 +188,10 @@ article h2 {
     color: #FA862D;
 }
 
-.main h1,
-.main h2,
-.main h3,
-.main p,
+main h1,
+main h2,
+main h3,
+main p,
 article h1,
 article h2,
 article h3,
@@ -199,13 +199,13 @@ article p,
 article li,
 article ul,
 article ol,
-.main span,
+main span,
 article span {
     background-color: transparent;
     letter-spacing: 2px;
 }
 
-.main span,
+main span,
 article span {
     font-weight: bold;
 }

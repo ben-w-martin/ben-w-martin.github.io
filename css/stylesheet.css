@@ -173,8 +173,8 @@ article {
     background-color: rgba(164,164,164,0.10);
     color: #39071fca;
     background-image: url("../img/noise-article.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     border-radius: 15px;
 }
 

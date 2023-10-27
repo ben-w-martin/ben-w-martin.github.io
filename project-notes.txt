@@ -1,0 +1,8 @@
+Benjamin Martin Portfolio - Project ideas
+
+- Web-based game
+- Design / UX focus - Portfolio itself.
+- Analytical focus
+- Practical app - Office Workout Tracker
+
+* Create a dark mode and toggle button.

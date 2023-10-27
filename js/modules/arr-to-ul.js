@@ -1,3 +1,5 @@
+"use strict";
+
 function arrToUl(arr) {
     let arrAsUl = [];
     for (let el of arr) {

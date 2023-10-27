@@ -1,3 +1,5 @@
+"use strict";
+
 function arrToOl(arr) {
     let arrAsOl = [];
     for (let el of arr) {

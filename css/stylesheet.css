@@ -315,6 +315,7 @@ article span {
 /*  Inquiry area  */
 
 #inquiry-container {
+    /*background-color: rgba(171, 171, 171, 0.42);*/
     width: 100%;
 }
 

@@ -6,3 +6,4 @@ Benjamin Martin Portfolio - Project ideas
 - Practical app - Office Workout Tracker
 
 * Create a dark mode and toggle button.
+* contact form in side menu changes to "back to top"

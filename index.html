@@ -16,7 +16,7 @@
 <body>
 
 <header id="banner">
-    <img class="color-bars" src="img/color-bars3.png" alt="Benjamin Martin">
+    <img class="color-bars" src="img/color-bars3.png" alt="colorful bar design">
 </header>
 
 <!--	Navigation 	-->
@@ -41,21 +41,27 @@
 <div class="side-dropdown">
     <button onclick="dropMenu()" class="dropbtn side-dropdown">CONTACT</button>
     <div id="contact-dropdown" class="dropdown-container">
-        <p>Phone:  <a class="dropdown-items" href="tel:+14349445520">434-944-5520.</a> Email:
-                <a class="dropdown-items"
-                   href="mailto:ben.w.martin17@gmail.com">ben.w.martin17<br>@gmail.com.</a><br>Or fill out a<br>&#8595; <a class="dropdown-items" href="#inquiry-container">contact form</a> &#8595;</p>
+        <p>Phone: <a class="dropdown-items" href="tel:+14349445520">434-944-5520.</a> Email:
+            <a class="dropdown-items"
+               href="mailto:ben.w.martin17@gmail.com">ben.w.martin17<br>@gmail.com.</a><br>Or, fill out a<br>&#8595; <a
+                    class="dropdown-items" href="#inquiry-container">contact form</a>. &#8595;</p>
     </div>
 </div>
 <!--	Main   -->
 
 <main>
-    <img class="decorative-banner" src="img/benjamin-martin.png" alt="Benjamin Martin">
+    <div id="img-container-main">
+        <img class="decorative-banner" src="img/benjamin-martin.png" alt="Benjamin Martin">
+        <img class="ben-portrait" src="img/gradient-bkgd-small.jpg" alt="portrait of Benjamin Martin">
+    </div>
+    <br>
     <h3>Bio</h3>
     <p>
         Full Stack Web Developer. Languages include HTML, CSS, JavaScript and Java. Experience with
         SQL, JQuery, Spring, and Adobe Creative Suite.
         Minimalist aesthetic with bright creativity. Highly functional yet simple.<br>
     </p>
+    <br>
     <h3>Education</h3>
     <ul class="eduList">
         <li>CodeUp Tech Bootcamp, 2024 >> Full Stack Web Developer.</li>
@@ -64,6 +70,7 @@
             Minor in Philosophy.
         </li>
     </ul>
+    <br>
     <h3>Job Experience</h3> <!--Match resume-->
     <p>Ten years of experience across military, mental health, restaurant, and custodial service
         industries. Consistently holding supervisory roles with responsibilities including training,
@@ -72,7 +79,8 @@
     </p>
     <br><br>
     <div id="inquiry-container">
-        <form onsubmit="runCode(event)" class="inquiry" action="https://formsubmit.co/ben.w.martin17@gmail.com" method="POST">
+        <form onsubmit="runCode(event)" class="inquiry" action="https://formsubmit.co/ben.w.martin17@gmail.com"
+              method="POST">
             <h3>Send an Inquiry</h3>
             <label for="firstName">First name:<br>
                 <input type="text" id="firstName" name="firstName" required></label><br>
@@ -83,8 +91,8 @@
             <label for="email">Email address:<br>
                 <input type="text" id="email" name="email" required></label><br>
             <label for="emailConfirm">Confirm email address:<br>
-                <input type="text" id="emailConfirm" name="emailConfirm" required></label><br>
-            <label for="message">Message:<br>
+<!--                <input type="text" id="emailConfirm" name="emailConfirm" required></label><br>-->
+<!--            <label for="message">Message:<br>-->
                 <textarea id="message" name="message" maxlength="400" required></textarea></label><br>
             <input id="submit" type="submit" value="Submit">
         </form>

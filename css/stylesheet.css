@@ -154,7 +154,7 @@ main .project-link:hover {
 #img-container-main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .decorative-banner {
@@ -170,8 +170,8 @@ main .ben-portrait {
     max-width: 120px;
     height: fit-content;
     min-width: .1em;
-    flex-grow: initial;
-    flex-shrink: initial;
+    /*flex-grow: initial;*/
+    flex-shrink: 0.5;
 }
 
 
@@ -394,18 +394,6 @@ article span {
     color: #39071fca;
 }
 
-/*
-.date-position {
-} */
-
-
 .italic {
     font-style: italic;
 }
-
-/* .link-style {
-	padding-left:
-} */
-
-/* Media */
-

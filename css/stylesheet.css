@@ -168,10 +168,8 @@ main .ben-portrait {
     margin-left: 10px;
     border-radius: 50%;
     max-width: 120px;
-    height: fit-content;
-    min-width: .1em;
-    /*flex-grow: initial;*/
-    flex-shrink: 0.5;
+    max-height: 120px;
+    /*height: fit-content;*/
 }
 
 

@@ -48,21 +48,30 @@ form input {
 /*	Banner*/
 
 #banner {
-    position: sticky;
-    top: -4%;
-    display: flex;
-    z-index: 1;
 }
 
 .color-bars {
     width: 100%;
+    z-index: 2;
 }
+/*#fade-container {*/
+/*    height: 0;*/
+/*    !*width: 100%;*!*/
+/*    position: sticky;*/
+/*    top: -50px;*/
+/*}*/
+
+/*.white-fade{*/
+/*    width: 100%;*/
+/*    z-index: 1;*/
+/*}*/
 
 /*	Navigation*/
 
 nav {
     height: 10vh;
     align-items: center;
+    z-index: 4;
 }
 
 .crumbs > ul {
@@ -156,10 +165,11 @@ main .project-link:hover {
 
 #img-container-main{
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     /*justify-content: space-evenly;*/
-    height: 15vh;
+    /*height: 25vh;*/
     align-items: flex-start;
+    /*background-color: #3498db;*/
 }
 
 .decorative-banner {

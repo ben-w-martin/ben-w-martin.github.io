@@ -156,20 +156,22 @@ main .project-link:hover {
 #img-container-main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: flex-start;
 }
 
 .decorative-banner {
-    max-width: 300px;
-    min-width: 50px;
+    width: 30vw;
+    height: auto;
+    margin-right: auto;
 }
 
 main .ben-portrait {
     margin-right: 10px;
     margin-left: 10px;
     border-radius: 50%;
-    max-width: 120px;
-    max-height: 120px;
+    width: 15vw;
     /*height: fit-content;*/
 }
 
@@ -281,9 +283,12 @@ article span {
     color: #FA862D;
     align-items: center;
     justify-content: space-around;
+    /*margin-right: 20px;*/
+    /*padding-right: 20px;*/
 }
 
 .dropbtn { /* button */
+    /*margin-right: 36px;*/
     justify-content: left;
     font-size: 24px;
     cursor: pointer;
@@ -303,7 +308,7 @@ article span {
     padding: 0 0 15px 15px;
     display: none;
     position: absolute;
-    top: 60px;
+    top: 55px;
     z-index: 1;
 }
 

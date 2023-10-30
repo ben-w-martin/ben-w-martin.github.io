@@ -147,6 +147,7 @@ main .project-link:hover {
 
 .project-link:link {
     text-decoration: none;
+    color: #39071fca;
 }
 
 /*	Main*/

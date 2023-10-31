@@ -205,13 +205,18 @@ main .ben-portrait {
 main {
     margin: 0 auto;
     width: 90vw;
-    padding: 2% 15% 2% 5%;
+    max-width: 1100px;
+    padding: 2% 5% 2% 5%;
     background-color: rgba(164, 164, 164, 0.10);
     color: #39071fca;
     background-image: url("../img/noise-article.png");
     background-size: contain;
     background-repeat: repeat;
     border-radius: 15px;
+}
+
+.main-text {
+    padding-right: 15%;
 }
 
 article h2 {

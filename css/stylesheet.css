@@ -47,31 +47,30 @@ form input {
 
 /*	Banner*/
 
-#banner {
-}
+/*#banner {*/
+/*}*/
 
-.color-bars {
+#color-bars-container {
+    z-index: 100;
     width: 100%;
-    z-index: 2;
+    position: relative;
 }
-/*#fade-container {*/
-/*    height: 0;*/
-/*    !*width: 100%;*!*/
-/*    position: sticky;*/
-/*    top: -50px;*/
-/*}*/
 
-/*.white-fade{*/
-/*    width: 100%;*/
-/*    z-index: 1;*/
-/*}*/
+.banner-img {
+    width: 100%;
+}
+#fade-container {
+    height: 0;
+    position:fixed;
+    top: -1px;
+    z-index: 1;
+}
 
 /*	Navigation*/
 
 nav {
     height: 10vh;
     align-items: center;
-    z-index: 4;
 }
 
 .crumbs > ul {

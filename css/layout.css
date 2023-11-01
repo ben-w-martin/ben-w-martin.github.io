@@ -14,3 +14,7 @@
 .justify-content-center {
     justify-content: center;
 }
+
+.show {
+    display: inline-block;
+}

@@ -9,6 +9,7 @@
 
 .todo-app {
     background-color: #7baff6;
+    box-shadow: 2em 2em 2em rgba(60,60,60,0.25);
     /*display: flex;*/
     border-radius: .8em;
     margin-top: 2em;

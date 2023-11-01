@@ -62,20 +62,17 @@
         <div class="todo-app">
             <div class="justify-content-center display-flex">
                 <h3>MY TODOS</h3>
+                <button id="clear">Clear</button>
             </div>
-            <form id="todo-form" onsubmit="addTodo()" action="#" method="post">
+            <form id="todo-form" action="#" method="post">
                 <label for="newTodo"></label>
                 <input type="text" id="newTodo">
                 <input type="submit" id="submit" value="Add">
             </form>
-            <div id="currentTodos" class="display-flex
+            <div id="current-todos-container" class="display-flex
                 flex-direction-column
                 flex-wrap-wrap">
-                <ul>
-                    <li><input type="checkbox"> To do item
-                        <button id="delete"><img src="img/times-icon.svg" alt="Delete"></button>
-                    </li>
-
+                <ul class="current-todos-ul">
                 </ul>
 
             </div>

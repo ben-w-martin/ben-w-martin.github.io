@@ -1,5 +1,6 @@
 "use strict";
 
+(() => {
 function dropMenu() {
     document.getElementById("contact-dropdown").classList.toggle("show");
     document.getElementById("contact-dropdown").animate(".show");
@@ -62,3 +63,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //     );
 // }
 
+})();

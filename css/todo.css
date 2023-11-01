@@ -1,6 +1,7 @@
 #todo-container {
     width: 100%;
-    height: 500px;
+    height: 100%;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -11,11 +12,11 @@
     /*display: flex;*/
     border-radius: .8em;
     margin-top: 2em;
-    padding: .5em;
     width: 60%;
     max-width: 500px;
     min-width: 300px;
-    height: 80%
+    height: 80%;
+    min-height: 200px;
     /*justify-content: center;*/
 }
 
@@ -24,10 +25,26 @@
     margin: auto;
 }
 
+#clear{
+    background: none;
+    border: none;
+    width: 0;
+    height: 0;
+    position: relative;
+    color: white;
+    top: 1em;
+    right: 3.5em;
+    cursor: pointer;
+}
+
+#clear:active {
+    color: #325c96;
+}
+
 .todo-app form {
+    padding: .5em .5em 1em .5em;
     display: flex;
-    border-bottom: 1px dashed white;
-    padding-bottom: 1em;
+    /*border-bottom: 1px dashed white;*/
 }
 
 input {
@@ -53,6 +70,7 @@ input {
 
 #newTodo {
     flex-grow: 2.5;
+    flex-shrink: .5;
     background-color: rgba(125, 125, 125, 0.17);
     border: 2px solid rgba(125, 125, 125, 0.17);
     outline: none;
@@ -60,10 +78,35 @@ input {
     padding-left: .5em;
 }
 
-#currentTodos {
-    padding: .5em;
+#current-todos-container {
+    justify-content: center;
 }
 
-#currentTodos li {
-    list-style: none;
+.current-todos-ul {
+    /*margin: 1em;*/
+    display: flex;
+    flex-flow: wrap column;
+    width: 100%;
+    max-height: 500px;
+    background-color: #7baff6;
+    border-radius: .8em;
+    overflow: auto;
 }
+
+
+
+.current-todos-ul li {
+    list-style: none;
+    color: white;
+    padding-left: .5em;
+}
+
+/*.current-todos-ul button,*/
+/*.current-todos-ul img {*/
+/*    display: none;*/
+/*}*/
+
+/*.current-todos-ul button:hover,*/
+/*.current-todos-ul img:hover {*/
+/*    display: block;*/
+/*}*/

@@ -1,20 +1,28 @@
 "use strict";
 
 (() => {
-    const currentTodos = [];
+    let currentTodos = [];
     const currentTodosUl = document.querySelector(".current-todos-ul");
     const todoForm = document.getElementById("todo-form");
+    const clear = document.getElementById("clear");
 
     todoForm.addEventListener("submit", function (e) {
         e.preventDefault();
         let newTodo = document.getElementById("newTodo").value;
-        currentTodos.push(newTodo);
-        newTodo = `<input type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button id="delete"><img src="img/times-icon.svg" alt="Delete"></button>`;
-        const frag = document.createDocumentFragment();
-        const li = document.createElement("li");
-        li.innerHTML = newTodo;
-        frag.appendChild(li);
-        currentTodosUl.appendChild(frag);
+        if (newTodo !== "") {
+            currentTodos.push(newTodo);
+            newTodo = `<input type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button id="delete"><img src="img/times-icon.svg" alt="Delete"></button>`;
+            const frag = document.createDocumentFragment();
+            const li = document.createElement("li");
+            li.innerHTML = newTodo;
+            frag.appendChild(li);
+            currentTodosUl.appendChild(frag);
+        }
+    });
+
+    clear.addEventListener("click", function (e) {
+        e.preventDefault();
+        currentTodos = [];
     });
 
 })();

@@ -1,0 +1,13 @@
+Benjamin Martin Portfolio - Project ideas
+
+- Web-based game.
+- Argos Coffee Site.
+- Design / UX focus - Portfolio itself.
+- Analytical focus.
+- Practical app - Office Workout Tracker.
+- To-Do List.
+
+* Fix JS for delete individual todo item.
+* Refactor CSS for conditional mobile rendering.
+* Create a dark mode and toggle button.
+* contact form in side menu changes to "back to top"

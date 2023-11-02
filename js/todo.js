@@ -2,11 +2,11 @@
 
 let currentTodos = [];
 // key ids each todo-item
-let key = 0;
+let key = -1;
 const currentTodosUl = document.querySelector(".current-todos-ul");
 const todoForm = document.getElementById("todo-form");
 const clear = document.getElementById("clear");
-const del = document.getElementsByClassName("del");
+const delButtons = document.getElementsByClassName("del");
 
 function currentKey() {
     key++;
@@ -31,13 +31,18 @@ function liToFrag(val, dest) {
     frag.appendChild(li);
     return dest.appendChild(frag);
 }
-function deleteItem(e) {
-    console.log("hello World");
-    const targetClasses = e.target.classList;
-    console.log(targetClasses);
-    let listClasses = document.querySelectorAll(".todo-item");
-    const buttonClassArray = Array.from(targetClasses);
 
+function deleteItem(e) {
+    const targetClasses = e.target.classList;
+    const classToRemove = targetClasses[1];
+    const elementsToRemove = currentTodosUl.querySelectorAll("." + classToRemove);
+
+    elementsToRemove.forEach(element => {
+        // element committing suicide
+        element.parentNode.removeChild(element);
+    })
+    --key;
+    console.log(key);
 }
 
 // Adds todo items
@@ -46,16 +51,20 @@ todoForm.addEventListener("submit", function (e) {
     let newTodo = document.getElementById("newTodo").value;
     if (newTodo !== "") {
         currentTodos.push(newTodo);
-        newTodo = `<input type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button class="del item${currentKey()}">X</button>`;
+        newTodo = `<input name="check-item" type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button class="del item${currentKey()}">X</button>`;
         liToFrag(newTodo, currentTodosUl);
+        listenersForDel();
+        console.log(key);
     }
 });
 
 // clears todo items
 clear.addEventListener("click", function () {
-    key = 0;
+    key = -1;
     removeByClass("todo-item");
-    console.log(currentTodosUl);
 });
 
-del.addEventListener("click", deleteItem);
+// adds listener to each new list item created.
+function listenersForDel() {
+    delButtons[key].addEventListener("click", deleteItem);
+}

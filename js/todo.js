@@ -1,17 +1,33 @@
 "use strict";
 
 let currentTodos = [];
+let keyList = [];
 // key ids each todo-item
-let key = -1;
+let key = 0;
 const currentTodosUl = document.querySelector(".current-todos-ul");
 const todoForm = document.getElementById("todo-form");
 const clear = document.getElementById("clear");
 const delButtons = document.getElementsByClassName("del");
 
-function currentKey() {
-    key++;
+function getRandomInt(min, max) {
+    if (typeof min === "boolean" || typeof max === "boolean" ||
+        min === null || max === null) {
+        return NaN;
+    }
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+
+function keyGen() {
+    key = getRandomInt(0, 100);
+    if (!keyList.includes(key)) {
+        keyList.push(key);
+    } else {
+        key = getRandomInt(0, 100);
+        keyList.push(key);
+    }
     return key;
 }
+
 
 function removeByClass(className) {
     const elementsToRemove = currentTodosUl.querySelectorAll("." + className);
@@ -41,30 +57,34 @@ function deleteItem(e) {
         // element committing suicide
         element.parentNode.removeChild(element);
     })
-    --key;
-    console.log(key);
+    currentTodos.shift();
 }
 
 // Adds todo items
 todoForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    keyGen();
     let newTodo = document.getElementById("newTodo").value;
-    if (newTodo !== "") {
-        currentTodos.push(newTodo);
-        newTodo = `<input name="check-item" type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button class="del item${currentKey()}">X</button>`;
-        liToFrag(newTodo, currentTodosUl);
-        listenersForDel();
-        console.log(key);
+    if (currentTodos.length < 100) {
+        if (newTodo !== "") {
+            currentTodos.push(newTodo);
+            newTodo = `<input name="check-item" type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button class="del item${key}">X</button>`;
+            liToFrag(newTodo, currentTodosUl);
+            listenersForDel();
+            console.log(key);
+        }
     }
 });
 
 // clears todo items
 clear.addEventListener("click", function () {
-    key = -1;
+    keyList = [];
+    currentTodos = [];
     removeByClass("todo-item");
 });
 
 // adds listener to each new list item created.
 function listenersForDel() {
-    delButtons[key].addEventListener("click", deleteItem);
+    console.log(currentTodos);
+    delButtons[currentTodos.length - 1].addEventListener("click", deleteItem);
 }

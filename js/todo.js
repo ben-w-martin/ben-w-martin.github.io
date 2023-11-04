@@ -1,9 +1,12 @@
 "use strict";
 
-let currentTodos = [];
+let currentTodos = {
+    items: [],
+    key: 0,
+};
 let keyList = [];
 // key ids each todo-item
-let key = 0;
+// let key = 0;
 const currentTodosUl = document.querySelector(".current-todos-ul");
 const todoForm = document.getElementById("todo-form");
 const clear = document.getElementById("clear");
@@ -18,14 +21,14 @@ function getRandomInt(min, max) {
 }
 
 function keyGen() {
-    key = getRandomInt(0, 100);
-    if (!keyList.includes(key)) {
-        keyList.push(key);
+    currentTodos.key = getRandomInt(0, 100);
+    if (!keyList.includes(currentTodos.key)) {
+        keyList.push(currentTodos.key);
     } else {
-        key = getRandomInt(0, 100);
-        keyList.push(key);
+        currentTodos.key = getRandomInt(0, 100);
+        keyList.push(currentTodos.key);
     }
-    return key;
+    return currentTodos.key;
 }
 
 
@@ -42,7 +45,7 @@ function removeByClass(className) {
 function liToFrag(val, dest) {
     const frag = document.createDocumentFragment();
     const li = document.createElement("li");
-    li.className = "todo-item " + "item" + key;
+    li.className = "todo-item " + "item" + currentTodos.key;
     li.innerHTML = val;
     frag.appendChild(li);
     return dest.appendChild(frag);
@@ -57,21 +60,24 @@ function deleteItem(e) {
         // element committing suicide
         element.parentNode.removeChild(element);
     })
-    currentTodos.shift();
+    currentTodos.items.shift();
 }
 
 // Adds todo items
 todoForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    const inputValueReset = document.getElementById("newTodo");
     keyGen();
     let newTodo = document.getElementById("newTodo").value;
-    if (currentTodos.length < 100) {
+    inputValueReset.value = "";
+    if (currentTodos.items.length < 100) {
         if (newTodo !== "") {
-            currentTodos.push(newTodo);
-            newTodo = `<input name="check-item" type="checkbox"> ${currentTodos[currentTodos.length - 1]} <button class="del item${key}">X</button>`;
+            currentTodos.items.push(newTodo);
+            newTodo = `<input name="check-item" type="checkbox"> ${currentTodos.items[currentTodos.items.length - 1]} <button class="del item${currentTodos.key}">X</button>`;
             liToFrag(newTodo, currentTodosUl);
             listenersForDel();
-            console.log(key);
+            console.log(currentTodos.key);
+
         }
     }
 });
@@ -79,12 +85,12 @@ todoForm.addEventListener("submit", function (e) {
 // clears todo items
 clear.addEventListener("click", function () {
     keyList = [];
-    currentTodos = [];
+    currentTodos.items = [];
     removeByClass("todo-item");
 });
 
 // adds listener to each new list item created.
 function listenersForDel() {
-    console.log(currentTodos);
-    delButtons[currentTodos.length - 1].addEventListener("click", deleteItem);
+    console.log(currentTodos.items);
+    delButtons[currentTodos.items.length - 1].addEventListener("click", deleteItem);
 }

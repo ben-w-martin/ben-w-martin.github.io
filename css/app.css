@@ -524,4 +524,22 @@
     }
 }
 
+.del {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: red;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: none;
+    color: white;
+}
+
+.del:active {
+    background-color: black;
+}
+
+input[type="checkbox"] {
+    width: 2em;
+}
+
 

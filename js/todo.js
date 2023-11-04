@@ -76,7 +76,6 @@ todoForm.addEventListener("submit", function (e) {
             newTodo = `<input name="check-item" type="checkbox"> ${currentTodos.items[currentTodos.items.length - 1]} <button class="del item${currentTodos.key}">X</button>`;
             liToFrag(newTodo, currentTodosUl);
             listenersForDel();
-            console.log(currentTodos.key);
 
         }
     }
@@ -91,6 +90,5 @@ clear.addEventListener("click", function () {
 
 // adds listener to each new list item created.
 function listenersForDel() {
-    console.log(currentTodos.items);
     delButtons[currentTodos.items.length - 1].addEventListener("click", deleteItem);
 }

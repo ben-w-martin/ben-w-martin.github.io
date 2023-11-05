@@ -86,6 +86,8 @@ clear.addEventListener("click", function () {
     keyList = [];
     currentTodos.items = [];
     removeByClass("todo-item");
+    const inputValueReset = document.getElementById("newTodo");
+    inputValueReset.value = "";
 });
 
 // adds listener to each new list item created.

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Argos Espresso</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600&display=swap');
+        @import url("https://use.typekit.net/mdo5wln.css");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'nove', sans serif;
+            text-align: center;
+            color: #fff;
+            margin: 0 auto;
+            padding: .5em;
+            border-radius: 25px;
+            background-color: #087dba;
+        }
+
+        img[src*="argos-header"] {
+            width: 100%;
+        }
+
+        header {
+            background-image: url("img/argos-header-bg.png");
+            background-repeat: no-repeat;
+        }
+
+        #header-buttons {
+            width: 80dvw;
+        }
+
+        #header-buttons li {
+            font-family: Inconsolata, monospace;
+            font-weight: bolder;
+            text-align: center;
+            list-style-type: none;
+            background-color: #ffb0c8;
+            border-radius: 50px;
+            padding: .5em;
+            margin: 1em;
+        }
+
+        .header-button {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+        }
+
+        #fresh-roasts {
+            height: inherit;
+        }
+
+        #fresh-roasts li {
+            list-style: none;
+        }
+
+        img[src*="marta-dzedyshko"] {
+            width: 100%;
+            height: auto;
+        }
+
+        img[src*="dmitry-zvolskiy"] {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Extra small devices (phones) */
+        @media (max-width: 575.98px) {
+
+            header {
+                display: flex;
+                flex-direction: column;
+                height: 600px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img[src*="logo"] {
+                margin: 1em;
+                width: 80dvw;
+                height: auto;
+            }
+
+            #fresh-roasts {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #fresh-roasts>div {
+                display: flex;
+                margin: -400px 20px 0 20px;
+                background-color: rgba(240, 241, 196, 0.9);
+                height: 350px;
+                border-radius: 50px;
+                padding: 20px;
+                /*justify-content: flex-end;*/
+            }
+
+            img[src*="coffee-bg"] {
+                border-radius: 0 50px 0 0;
+            }
+            .coffee-bg-container {
+                /*height: 0;*/
+                /*width: 0;*/
+                /*position: relative;*/
+                /*right: 0;*/
+            }
+        }
+
+        /* Small devices (tablets) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            #container {
+                margin: 0 1em;
+            }
+        }
+
+        /* Medium devices (desktops) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            /* Styles */
+        }
+
+        /* Large devices (large desktops) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            /* Styles */
+        }
+
+        /* Extra large devices */
+        @media (min-width: 1200px) {
+            /* Styles */
+        }
+
+    </style>
+</head>
+<body id="container">
+<header>
+    <div class="img-container">
+        <a href="#"><img src="img/logo.png" alt="Argos Espresso"/></a>
+    </div>
+    <ul id="header-buttons">
+        <li><a href="#" class="header-button">SHOP OUR STORE</a></li>
+        <li><a href="#" class="header-button">VIEW OUR LOCATIONS</a></li>
+        <li><a href="#" class="header-button">SEE OUR MENU</a></li>
+    </ul>
+</header>
+<main>
+    <section id="fresh-roasts">
+        <img src="img/pexels-marta-dzedyshko-2067628.jpg"/>
+        <img src="img/pexels-dmitry-zvolskiy-3581751.jpg"/>
+        <div>
+            <h1>FRESH ROASTED COFFEE</h1>
+            <div class="coffee-bg-container">
+                <img src="img/coffee-bg.png"/>
+            </div>
+        </div>
+    </section>
+</main>
+<footer></footer>
+</body>
+</html>

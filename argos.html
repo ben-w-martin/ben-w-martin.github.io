@@ -46,7 +46,7 @@
         }
 
         #header-buttons {
-            width: 80dvw;
+            width: 80vw;
         }
 
         #header-buttons li {
@@ -101,7 +101,7 @@
 
             img[src*="logo"] {
                 margin: 1em;
-                width: 80dvw;
+                width: 80vw;
                 height: auto;
             }
 
@@ -165,11 +165,13 @@
             }
 
             #info {
+                background-image: url("img/texture-bg.jpeg");
+                background-size: cover;
                 display: flex;
                 flex-direction: column;
                 background-color: rgb(82, 82, 81);
                 width: 100%;
-                height: 85dvh;
+                height: 100vh;
             }
 
             #info h2 {
@@ -179,16 +181,16 @@
             }
 
             #subscription {
-                background-image: url("img/pexels-pnw-production-8490369.jpg");
+                background-image: url("img/pexels-pnw-production-8490369-3.jpg");
                 background-color: rgba(211, 86, 180, 0.71);
                 flex-direction: column;
-                background-size: contain;
+                background-size: cover;
                 background-repeat: no-repeat;
                 margin: auto;
-                width: 80dvw;
-                max-width: 390px;
+                width: 80vw;
+                max-width: 400px;
                 height: auto;
-                /*max-height: 800px;*/
+                min-height: 600px;
                 align-items: center;
             }
 
@@ -206,24 +208,54 @@
                 margin-bottom: 5em;
                 display: flex;
                 flex-direction: column;
-                width: 40dvw;
-                height: 150px;
-                justify-content: space-between;
+                width: 80%;
+                height: 80%;
+                justify-content: space-around;
             }
 
             .subscribeBtns button {
                 font-family: Inconsolata, monospace;
                 font-weight: bolder;
+                font-size: 1.2em;
                 text-align: center;
                 background-color: #FFFFFF;
                 border: none;
                 border-radius: 50px;
                 padding: 1em;
                 margin: 1em;
+            }
+
+            #origin-story {
+                background-image: url("img/pexels-veranika-verkhovina-19050728-2.jpg");
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #origin-story h2 {
+                margin: 1em 0;
+            }
+
+            #origin-story h3 {
+                text-align: right;
+                margin-bottom: 1em;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 5px;
+                padding: 5px;
+            }
+
+            #origin-story div {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                padding: 1em;
+                text-align: left;
+                width: 80%;
+            }
         }
 
         /*----------------------------------------------Small devices (tablets)---------------------------------------*/
-
         @media (min-width: 576px) and (max-width: 767.98px) {
             #container {
                 margin: 0 1em;
@@ -231,7 +263,6 @@
         }
 
         /*----------------------------------------------Medium devices (desktops)-------------------------------------*/
-
         @media (min-width: 768px) and (max-width: 991.98px) {
 
 
@@ -256,7 +287,7 @@
             }
 
             .subscribeBtns button:hover {
-                background-color: #ffb0c8;
+                background-color: #f5e896;
             }
 
             .subscribeBtns button:active {
@@ -265,6 +296,10 @@
                 left: 1px;
                 box-shadow: 1px 1px rgba(95, 95, 95, 0.59);
             }
+
+
+        }
+
         }
 
         /*---------------------------------------------Large devices (large desktops)---------------------------------*/
@@ -328,7 +363,18 @@
             </div>
         </div>
     </section>
+    <section id="origin-story">
+        <h2 class="inconsolata">ORIGIN STORY</h2>
+        <h3 class="inconsolata">colombia huila</h3>
+        <div>
+            <p class="inconsolata">Grown at over 2,000 feet above sea level, this batch of yellow bourbon is harvested
+                and processed meticulously in the hills of Colombia. The mountainous environment perfectly reflects
+                coffee's ideal growing climate, producing incredibly rich and vibrant flavors. Using the natural process
+                and anaerobic fermentation paired with a perfectly tuned light roast, this coffee bursts with tropical
+                fruit, and a full body.</p>
+        </div>
 
+    </section>
     <!--        <img src="img/pexels-bill-salazar-17836198.jpg"/>-->
     <!--        <img src="img/pexels-michael-burrows-7125592.jpg"/>-->
     <!--        <img src="img/pexels-andrew-neel-4264047.jpg"/>-->

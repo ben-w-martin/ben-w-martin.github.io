@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Tracker</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/tracker-styles.css">
 </head>
 <body>
+<header>
+    <img class="pushups" src="img/pushups.png"/>
+    <h1>Office Workout Tracker</h1>
+</header>
+<main class="container">
+    <section class="row">
+        <div id="form-container" class="display-flex">
+            <form class="m-auto">
+                <label for="exercises">Exercise</label>
+                <select name="exercise" id="exercises">
+                    <option value="null">Select</option>
+                </select>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+</footer>
 <script src="js/tracker.js"></script>
-<img class="pushups" src="img/pushups.png" />
-<h1>Office Workout Tracker</h1>
-<form>
-    <label>
-</form>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

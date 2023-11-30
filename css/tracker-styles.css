@@ -1,0 +1,28 @@
+:root {
+    --accent-orange: #FA862D;
+    --body-bg-dark: #1e1d1d;
+    --app-bg-dark: #383838;
+    --text-color: #bbbbbb;
+}
+
+body {
+    background-color: var(--body-bg-dark);
+    color: var(--text-color);
+}
+
+#form-container {
+    background-color: var(--app-bg-dark);
+}
+
+@media (max-width: 575.98px) {
+    #form-container {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 576px) {
+    #form-container {
+        border-radius: 5px;
+    }
+}
+

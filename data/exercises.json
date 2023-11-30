@@ -1,0 +1,36 @@
+[
+  {
+    "exercise": [
+      {
+        "name": "Push-ups",
+        "repetitions": 0,
+        "date-time": ""
+      }, {
+        "name": "Squats",
+        "repetitions": 0,
+        "date-time": ""
+      }, {
+        "name": "Lunges",
+        "repetitions": 0,
+        "date-time": ""
+      }, {
+        "name": "Pull-ups",
+        "repetitions": 0,
+        "date-time": ""
+      }, {
+        "name": "Plank",
+        "repetitions": 0,
+        "date-time": ""
+      }, {
+        "name": "Crunches",
+        "repetitions": 0,
+        "date-time": ""
+      }, {
+        "name": "Stairs",
+        "stair-total": 0,
+        "date-time": ""
+      }]
+
+
+  }
+]

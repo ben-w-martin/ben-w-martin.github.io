@@ -2,3 +2,4 @@
 *.iml
 .DS_STORE
 portfolio-react
+*/node_modules/

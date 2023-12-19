@@ -20,5 +20,11 @@ html {
   @include respond(tab-port) { // width < 900
     font-size: 50%; // 1 rem = 8px; 8/16 = 50%
    }
+}
 
+body {
+  font-family: monospace, sans-serif;
+  background-image: linear-gradient(to bottom, $color-bg-primary-1, $color-bg-primary-2);
+  line-height: 2.5rem;
+  height: 100vh;
 }

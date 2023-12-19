@@ -1,0 +1,10 @@
+.row {
+  padding: 0 3rem;
+  position: relative;
+  background-color: orangered;
+  height: 100%;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}

@@ -2,5 +2,6 @@
 *.iml
 .DS_STORE
 portfolio-react
-/projects/Natours/starter/node_modules/
 /node_modules/
+/new-architecture/node_modules/
+/new-architecture/sass/

@@ -23,6 +23,11 @@ $break arg choices:
 html {
   font-size: 62.5%;
 }
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 @media only screen and (max-width: 112.5em) {
   html {
     font-size: 75%;
@@ -104,6 +109,10 @@ body {
   margin-bottom: 1.5rem !important;
 }
 
+.u-padding {
+  padding: 3rem;
+}
+
 .u-padding-x-sm {
   padding: 0 3rem !important;
 }
@@ -112,22 +121,76 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   background-color: #141414;
   border-radius: 100rem;
-  height: 40%;
-  width: 90%;
+  height: 100%;
+  min-height: 25rem;
+  max-height: 30rem;
+  flex-direction: column;
+  width: 95%;
+  max-width: 100rem;
+  z-index: 10;
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.3);
+  transition: all 0.6s ease;
+  backface-visibility: hidden;
+}
+.pill:hover {
+  transform: translate(-50%, -15rem) scale(1.1);
+}
+.pill:hover + .bar {
+  opacity: 0;
+}
+.pill:hover + .bar > .bar__1 {
+  transform: translateX(20rem);
+}
+.pill:hover + .bar > .bar__3 {
+  transform: translateX(-20rem);
+}
+@media only screen and (max-width: 112.5em) {
+  .pill {
+    min-height: 20rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .pill {
+    width: 80%;
+  }
+  .pill:hover {
+    transform: translate(-50%, -15rem) scale(1.1);
+  }
+  .pill:hover + .bar {
+    opacity: 0;
+  }
+  .pill:hover + .bar > .bar__1 {
+    transform: translateX(20rem);
+  }
+  .pill:hover + .bar > .bar__3 {
+    transform: translateX(-20rem);
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .pill {
+    width: 80%;
+  }
+  .pill:hover {
+    transform: translate(-50%, -15rem) scale(1.1);
+  }
+  .pill:hover + .bar {
+    opacity: 0;
+  }
+  .pill:hover + .bar > .bar__1 {
+    transform: translateX(20rem);
+  }
+  .pill:hover + .bar > .bar__3 {
+    transform: translateX(-20rem);
+  }
 }
 .pill__title {
   display: flex;
   height: 50%;
   width: 100%;
   align-items: center;
-}
-@media only screen and (max-width: 112.5em) {
-  .pill__title--name {
-    margin-top: 2rem;
-  }
 }
 .pill__list {
   position: relative;
@@ -149,9 +212,10 @@ body {
   font-size: 2.2rem;
   border-radius: 50rem;
   transition: all 0.3s ease;
+  backface-visibility: hidden;
 }
 .pill__list--item:hover {
-  background-color: orangered;
+  background-color: #FF4500;
   transform: translateY(-0.2rem) scale(1.01);
 }
 .pill__list--item:active {
@@ -173,10 +237,11 @@ body {
   height: 1rem;
   width: 60%;
   clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%, 0 0);
-  transition: all 0.5s ease-out;
-  transform: translate(-50%, -50%);
+  transition: all 0.8s cubic-bezier(0, 0, 0.35, 1.53);
+  backface-visibility: hidden;
 }
 .pill:hover .pill__bar {
+  background-color: #00fff6;
   transform: translate(-50%, -3rem);
 }
 @media only screen and (max-width: 75em) {
@@ -185,13 +250,102 @@ body {
   }
 }
 
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  transition: all 1s ease;
+  backface-visibility: hidden;
+}
+@media only screen and (max-width: 75em) {
+  .bar {
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .bar {
+    height: 35%;
+  }
+}
+.bar__1 {
+  width: 30%;
+  background-color: rgba(128, 128, 128, 0.2);
+  clip-path: polygon(60% 0, 100% 0, 40% 100%, 0 100%);
+  transition: all 1s ease;
+  backface-visibility: hidden;
+}
+@media only screen and (max-width: 112.5em) {
+  .bar__1 {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .bar__1 {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .bar__1 {
+    width: 45%;
+  }
+}
+.bar__2 {
+  width: 30%;
+  background-color: rgba(128, 128, 128, 0.2);
+  clip-path: polygon(60% 0, 100% 0, 40% 100%, 0 100%);
+  transition: all 1s ease;
+  backface-visibility: hidden;
+}
+@media only screen and (max-width: 112.5em) {
+  .bar__2 {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .bar__2 {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .bar__2 {
+    width: 45%;
+  }
+}
+.bar__3 {
+  width: 30%;
+  background-color: rgba(128, 128, 128, 0.2);
+  clip-path: polygon(60% 0, 100% 0, 40% 100%, 0 100%);
+  transition: all 1s ease;
+  backface-visibility: hidden;
+}
+@media only screen and (max-width: 112.5em) {
+  .bar__3 {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .bar__3 {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .bar__3 {
+    width: 45%;
+  }
+}
+
 .header {
   height: 95dvh;
-  background-image: linear-gradient(to bottom right, orangered, #d74000);
+  background-image: linear-gradient(to bottom right, #FF4500, #9d3200);
 }
 
 .row {
-  padding: 0 3rem;
   position: relative;
   height: 100%;
 }
@@ -199,6 +353,11 @@ body {
   .row {
     padding: 0;
   }
+}
+
+.about {
+  background-color: #141414;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

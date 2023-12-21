@@ -275,7 +275,7 @@ body {
 }
 .bar__1 {
   width: 30%;
-  background-color: rgba(128, 128, 128, 0.2);
+  background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.2), rgba(98, 98, 98, 0.2));
   clip-path: polygon(60% 0, 100% 0, 40% 100%, 0 100%);
   transition: all 1s ease;
   backface-visibility: hidden;
@@ -297,7 +297,7 @@ body {
 }
 .bar__2 {
   width: 30%;
-  background-color: rgba(128, 128, 128, 0.2);
+  background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.2), rgba(98, 98, 98, 0.2));
   clip-path: polygon(60% 0, 100% 0, 40% 100%, 0 100%);
   transition: all 1s ease;
   backface-visibility: hidden;
@@ -319,7 +319,7 @@ body {
 }
 .bar__3 {
   width: 30%;
-  background-color: rgba(128, 128, 128, 0.2);
+  background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.2), rgba(98, 98, 98, 0.2));
   clip-path: polygon(60% 0, 100% 0, 40% 100%, 0 100%);
   transition: all 1s ease;
   backface-visibility: hidden;

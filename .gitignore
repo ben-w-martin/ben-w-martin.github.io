@@ -2,6 +2,7 @@
 *.iml
 .DS_STORE
 portfolio-react
-/node_modules/
-/new-architecture/node_modules/
+*/node_modules/
+/node_modules/*
 /new-architecture/sass/
+/new-architecture/node_modules/

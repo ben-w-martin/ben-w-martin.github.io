@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700&display=swap');
+
+.heading-primary {
+  font-family: "BD Geminis", Serif;
+  font-size: 9rem;
+  color: $color-white;
+  line-height: 8rem;
+}
+
+.heading-secondary {
+  font-family: "BD Geminis", Serif;
+  font-size: 4.5rem;
+  line-height: 6rem;
+}
+
+.heading-tertiary {
+  font-family: "BD Geminis", Serif;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+body {
+  font-family: 'Sono', monospace;
+  color: $color-white;
+  font-size: 1.8rem;
+}

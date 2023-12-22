@@ -377,18 +377,29 @@ body {
 .about__tabs {
   display: flex;
 }
+.about__tabs--header {
+  position: relative;
+  z-index: 10;
+}
 .about__input {
   display: none;
 }
 .about__tabs--header-box {
   text-align: center;
   width: 100%;
+  position: relative;
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
 }
 .about__tabs--header-box:not(:first-child) {
   border-left: 1px solid #FF4500;
 }
 .about__tabs--header-box:not(:last-child) {
   border-right: 1px solid #FF4500;
+}
+.about__tabs--header-box:hover {
+  border-bottom: 1px solid #FF4500;
 }
 .about__tab {
   display: none;

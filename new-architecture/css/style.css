@@ -384,6 +384,9 @@ body {
 .about__input {
   display: none;
 }
+#bio:checked ~ .about__input--bio, #edu:checked ~ .about__input--edu, #exp:checked ~ .about__input--exp {
+  display: block;
+}
 .about__tabs--header-box {
   text-align: center;
   width: 100%;

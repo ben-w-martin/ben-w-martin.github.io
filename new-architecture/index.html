@@ -12,35 +12,82 @@
 </head>
 <body>
 <header class="header">
-    <section class="row">
-        <div class="pill">
-            <div class="pill__title">
-                <h1 class="pill__title--name heading-primary">
-                    Benjamin Martin
-                </h1>
-            </div>
-            <nav class="pill__list">
-                <ul class="pill__list--ul">
-                    <li class="pill__list--item"><a href="https://www.linkedin.com/in/benjamin-martin-0aa3171b5/"
-                                                    target="_blank">LinkedIn</a></li>
-                    <li class="pill__list--item"><a href="https://github.com/ben-w-martin" target="_blank">GitHub</a>
-                    </li>
-                    <li class="pill__list--item"><a href="#" target="_blank">Projects</a></li>
-                </ul>
-                <div class="pill__bar">&nbsp;</div>
-            </nav>
+    <div class="pill">
+        <div class="pill__title">
+            <h1 class="pill__title--name heading-primary">
+                Benjamin Martin
+            </h1>
         </div>
-        <div class="bar">
-            <div class="bar__1">&nbsp;</div>
-            <div class="bar__2">&nbsp;</div>
-            <div class="bar__3">&nbsp;</div>
-        </div>
-    </section>
+        <nav class="pill__list">
+            <ul class="pill__list--ul">
+                <li class="pill__list--item"><a href="https://www.linkedin.com/in/benjamin-martin-0aa3171b5/"
+                                                target="_blank">LinkedIn</a></li>
+                <li class="pill__list--item"><a href="https://github.com/ben-w-martin" target="_blank">GitHub</a>
+                </li>
+                <li class="pill__list--item"><a href="#" target="_blank">Projects</a></li>
+            </ul>
+            <div class="pill__bar">&nbsp;</div>
+        </nav>
+    </div>
+    <div class="bar">
+        <div class="bar__1">&nbsp;</div>
+        <div class="bar__2">&nbsp;</div>
+        <div class="bar__3">&nbsp;</div>
+    </div>
 </header>
+
 <main class="main">
-    <section class="row">
-        <div class="about"></div>
-    </section>
+    <div class="about__container">
+        <div class="about">
+            <!----------------- ABOUT ME TABS ----------------->
+            <div class="about__tabs">
+                <div class="about__tabs--header-box">
+                    <label for="bio" class="about__label">
+                        <h2 class="about__tabs--header heading-secondary">Bio</h2>
+                    </label>
+                    <input id="bio" type="radio" name="about" class="about__input" checked>
+                </div>
+                <div class="about__tabs--header-box">
+                    <label for="edu" class="about__label">
+                        <h2 class="about__tabs--header heading-secondary">Education</h2>
+                    </label>
+                    <input id="edu" type="radio" name="about" class="about__input">
+                </div>
+                <div class="about__tabs--header-box">
+                    <label for="exp" class="about__label">
+                        <h2 class="about__tabs--header heading-secondary">Experience</h2>
+                    </label>
+                    <input id="exp" type="radio" name="about" class="about__input">
+                </div>
+            </div>
+
+            <!----------------- ABOUT ME INFO ----------------->
+            <div class="about__info">
+
+                <div class="about__tab about__bio">
+                    <p class="about__bio--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        beatae
+                        blanditiis commodi, dolor ea, eius eos harum illo in labore laborum libero officia quas quisquam
+                        quo
+                        repudiandae temporibus ullam voluptas!</p>
+                </div>
+                <div class="about__tab about__edu">
+                    <p class="about__edu--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        beatae
+                        blanditiis commodi, dolor ea, eius eos harum illo in labore laborum libero officia quas quisquam
+                        quo
+                        repudiandae temporibus ullam voluptas!</p>
+                </div>
+                <div class="about__tab about__exp">
+                    <p class="about__exp--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                        beatae
+                        blanditiis commodi, dolor ea, eius eos harum illo in labore laborum libero officia quas quisquam
+                        quo
+                        repudiandae temporibus ullam voluptas!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 <footer class="footer"></footer>
 </body>

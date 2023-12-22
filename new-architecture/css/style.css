@@ -381,6 +381,9 @@ body {
   position: relative;
   z-index: 10;
 }
+.about__label:hover {
+  border-bottom: 1px solid #FF4500;
+}
 .about__input {
   display: none;
 }
@@ -400,9 +403,6 @@ body {
 }
 .about__tabs--header-box:not(:last-child) {
   border-right: 1px solid #FF4500;
-}
-.about__tabs--header-box:hover {
-  border-bottom: 1px solid #FF4500;
 }
 .about__tab {
   display: none;

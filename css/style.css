@@ -382,6 +382,11 @@ body {
     transform: translateX(1rem);
   }
 }
+.projects {
+  background-color: rgba(98, 98, 98, 0.2);
+  display: none;
+}
+
 .header {
   height: 95dvh;
   background-image: linear-gradient(to bottom right, #FF4500, #9d3200);

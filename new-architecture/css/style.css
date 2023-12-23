@@ -392,10 +392,11 @@ body {
 }
 .tabs__header-box {
   text-align: center;
+  padding: 2rem 0;
   width: 100%;
   position: relative;
   backface-visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
   border-right: 1px solid #FF4500;
 }
@@ -405,11 +406,13 @@ body {
 
 .info {
   padding: 5rem 10rem;
+  background-color: rgba(98, 98, 98, 0.2);
+  border-right: 1px solid #FF4500;
+  margin-top: -1px;
 }
 .info__box {
-  padding: 3rem;
-  background-color: rgba(98, 98, 98, 0.2);
-  border-radius: 5px;
+  padding: 0 3rem;
+  border-left: 1px solid #FF4500;
 }
 .info__box:not(:first-child) {
   display: none;

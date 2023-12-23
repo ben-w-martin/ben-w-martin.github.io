@@ -11,7 +11,10 @@ for (let i = 0; i < tabs.length; i++) {
         infoBlocks.forEach(block => {
             block.style.display = "none";
         })
-        // headerBoxes[i].style.backgroundColor = "$color-grey-a-dk";
+        headerBoxes.forEach(box => {
+            box.style.backgroundColor = "transparent";
+        })
+        headerBoxes[i].style.backgroundColor = "rgba(98, 98, 98, 0.2)";
         infoBlocks[i].style.display = "block";
     });
 }

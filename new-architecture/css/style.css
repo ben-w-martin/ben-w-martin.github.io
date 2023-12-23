@@ -404,6 +404,14 @@ body {
   border-right: 1px solid #FF4500;
 }
 
+.info {
+  padding: 5rem 10rem;
+}
+.info__box {
+  padding: 3rem;
+  background-color: rgba(98, 98, 98, 0.2);
+  border-radius: 5px;
+}
 .info__box:not(:first-child) {
   display: none;
 }

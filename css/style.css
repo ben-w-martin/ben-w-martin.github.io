@@ -397,6 +397,16 @@ body {
   }
 }
 
+.footer {
+  background-color: #141414;
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 1.2rem;
+  margin-top: -10rem;
+}
+
 .about__container {
   background-color: #141414;
   height: 75%;

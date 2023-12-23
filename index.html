@@ -1,117 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ben Martin Portfolio</title>
-    <link rel="icon" href="img/favicon.ico"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link href="css/app.css" rel="stylesheet" type="text/css">
-    <link href="css/layout.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benjamin Martin | Web Developer</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header id="banner">
-    <div id="color-bars-container">
-        <img class="banner-img" src="img/color-bars3.png" alt="colorful bar design">
+<header class="header">
+    <div class="pill">
+        <div class="pill__title">
+            <h1 class="pill__title--name heading-primary">
+                Benjamin Martin
+            </h1>
+        </div>
+        <nav class="pill__list">
+            <ul class="pill__list--ul">
+                <li class="pill__list--item"><a href="https://www.linkedin.com/in/benjamin-martin-0aa3171b5/"
+                                                target="_blank">LinkedIn</a></li>
+                <li class="pill__list--item"><a href="https://github.com/ben-w-martin" target="_blank">GitHub</a>
+                </li>
+                <li class="pill__list--item"><a href="#" target="_blank">Projects</a></li>
+            </ul>
+            <div class="pill__bar">&nbsp;</div>
+        </nav>
     </div>
-    <div id="fade-container">
-        <img class="banner-img" src="img/white-fade.png" alt="white fade">
+    <div class="bar">
+        <div class="bar__1">&nbsp;</div>
+        <div class="bar__2">&nbsp;</div>
+        <div class="bar__3">&nbsp;</div>
     </div>
 </header>
 
-<!--	Navigation 	-->
+<main class="main">
+    <div class="about__container">
+        <div class="about">
+            <!----------------- ABOUT ME TABS ----------------->
+            <div class="tabs">
 
-<nav>
-    <div class="crumbs">
-        <ul>
-            <li id="crumb-current" class="crumb"><a href="index.html">Home</a></li>
-            <li class="crumb"><a href="https://www.linkedin.com/in/benjamin-martin-0aa3171b5/">LinkedIn</a></li>
-            <li class="crumb"><a href="https://www.github.com/ben-w-martin">GitHub</a></li>
-            <li class="crumb"><a href="projects.html">Projects</a></li>
-        </ul>
-    </div>
-    <div id="projects-dropdown">
-        <table>
-            <tr>
-                <td><a class="reg-text" href="#">Office Workout Tracker</a></td>
-            </tr>
-        </table>
-    </div>
-</nav>
-<div class="side-dropdown">
-    <button onclick="dropMenu()" class="dropbtn side-dropdown">CONTACT</button>
-    <div id="contact-dropdown" class="dropdown-container">
-        <p>Phone: <a class="dropdown-items" href="tel:+14349445520">434-944-5520.</a> Email:
-            <a class="dropdown-items"
-               href="mailto:ben.w.martin17@gmail.com">ben.w.martin17<br>@gmail.com.</a><br>Or, fill out a<br>&#8595; <a
-                    class="dropdown-items" href="#inquiry-container">contact form</a>. &#8595;</p>
-    </div>
-</div>
-<!--	Main   -->
+                <div class="tabs__header-box">
+                    <label for="bio" class="tabs__label">
+                        <span class="tabs__header heading-secondary">Bio</span>
+                    </label>
+                    <input id="bio" type="radio" name="about" class="tabs__input " checked>
+                </div>
 
-<main>
-    <div id="img-container-main">
-        <img class="decorative-banner" src="img/benjamin-martin.png" alt="Benjamin Martin">
-        <img class="ben-portrait" src="img/gradient-bkgd-small.jpg" alt="portrait of Benjamin Martin">
+                <div class="tabs__header-box">
+                    <label for="edu" class="tabs__label">
+                        <span class="tabs__header heading-secondary">Education</span>
+                    </label>
+                    <input id="edu" type="radio" name="about" class="tabs__input ">
+                </div>
+
+                <div class="tabs__header-box">
+                    <label for="exp" class="tabs__label">
+                        <span class="tabs__header heading-secondary">Experience</span>
+                    </label>
+                    <input id="exp" type="radio" name="about" class="tabs__input ">
+                </div>
+            </div>
+
+            <!----------------- ABOUT ME INFO ----------------->
+            <div class="info">
+                <div class="info__box info__bio">
+                    <p class="info__bio--text">Full Stack Web Developer. Languages include HTML, CSS, JavaScript and
+                        Java. <br>Experience with mySQL, Spring, and Adobe Creative Suite. <br>Minimalist aesthetic with bright
+                        creativity. Highly functional yet simple.
+                    </p>
+                </div>
+                <div class="info__box info__edu">
+                    <p class="info__edu--text"><strong>CodeUp Tech Bootcamp</strong>, 2023 - 2024 &rarr; Full Stack Web Development Bootcamp. 600+ hours of coding over 5 months to build web applications from scratch on the front and back end.<br><br>
+                        <strong>Liberty University</strong>, 2029 - 2022 &rarr; Bachelor of Arts in Interdisciplinary Studies (3.95 GPA). Concentrations in Religion and Social Sciences. Minor in Philosophy.
+                        <br><br><strong>U. S. Army Behavioral Health School</strong>, 2021 &rarr; Advanced individual training to provide mental health services for service members.<br>
+                        ASVAB score: 98.</p>
+                </div>
+                <div class="info__box info__exp">
+                    <p class="info__exp--text">Ten years of experience across military, mental health, restaurant, and custodial service industries. Consistently holding supervisory roles with responsibilities including training, education, quality assurance, and project execution. Adaptable to rapid changes in environment, personnel, workload, and pace.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <section class="main-text">
-        <h3>Bio</h3>
-        <p>
-            Full Stack Web Developer. Languages include HTML, CSS, JavaScript and Java. Experience with
-            mySQL, Spring, and Adobe Creative Suite.
-            Minimalist aesthetic with bright creativity. Highly functional yet simple.<br>
-        </p>
-        <br>
-        <h3>Education</h3>
-        <ul class="eduList">
-            <li>CodeUp Tech Bootcamp, 2024 >> Full Stack Web Developer.</li>
-            <li>Liberty University, 2022 >> Bachelor of Arts in
-                Interdisciplinary Studies. Concentrations in Religion and Social Sciences.
-                Minor in Philosophy.
-            </li>
-        </ul>
-        <br>
-        <h3>Job Experience</h3> <!--Match resume-->
-        <p>Ten years of experience across military, mental health, restaurant, and custodial service
-            industries. Consistently holding supervisory roles with responsibilities including training,
-            education, quality assurance, and project execution. Adaptable to rapid changes in environment, personnel,
-            workload, and pace.
-        </p>
-        <br><br>
-    </section>
-    <section id="inquiry-container">
-        <form onsubmit="runCode(event)" class="inquiry" action="https://formsubmit.co/ben.w.martin17@gmail.com"
-              method="POST">
-            <h3>Send an Inquiry</h3>
-            <label for="firstName">First name:<br>
-                <input type="text" id="firstName" name="firstName" required></label><br>
-            <label for="lastName">Last name:<br>
-                <input type="text" id="lastName" name="lastName" required></label><br>
-            <label for="company">Company:<br>
-                <input type="text" id="company" name="company"></label><br>
-            <label for="email">Email address:<br>
-                <input type="text" id="email" name="email" required></label><br>
-            <!--            <label for="emailConfirm">Confirm email address:<br>-->
-            <!--&lt;!&ndash;                <input type="text" id="emailConfirm" name="emailConfirm" required></label><br>&ndash;&gt;-->
-            <label for="message">Message:<br>
-                <textarea id="message" name="message" maxlength="655" required></textarea></label><br>
-            <input id="submit" type="submit" value="Submit">
-        </form>
-    </section>
-    <br><br>
 </main>
-<img class="mini-bars-left" src="img/mini-bars-left.png" alt="colorful bars">
-<footer>
-</footer>
-<script src="js/portfolio.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<footer class="footer"></footer>
+<script src="js/index.js"></script>
 </body>
 </html>

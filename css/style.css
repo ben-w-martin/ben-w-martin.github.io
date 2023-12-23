@@ -74,6 +74,7 @@ body {
   font-family: "Sono", monospace;
   color: #eeeeee;
   font-size: 1.8rem;
+  line-height: 4rem;
 }
 
 .u-center-text {
@@ -391,26 +392,27 @@ body {
 }
 .tabs__header-box {
   text-align: center;
+  padding: 2rem 0;
   width: 100%;
   position: relative;
   backface-visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
-}
-.tabs__header-box:not(:first-child) {
-  border-left: 1px solid #FF4500;
-}
-.tabs__header-box:not(:last-child) {
   border-right: 1px solid #FF4500;
+}
+.tabs__header-box:first-child {
+  background-color: rgba(98, 98, 98, 0.2);
 }
 
 .info {
   padding: 5rem 10rem;
+  background-color: rgba(98, 98, 98, 0.2);
+  border-right: 1px solid #FF4500;
+  margin-top: -1px;
 }
 .info__box {
-  padding: 3rem;
-  background-color: rgba(98, 98, 98, 0.2);
-  border-radius: 5px;
+  padding: 0 3rem;
+  border-left: 1px solid #FF4500;
 }
 .info__box:not(:first-child) {
   display: none;

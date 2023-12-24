@@ -1,0 +1,36 @@
+.tabs {
+  display: flex;
+  width: 100%;
+
+  &__header {
+    position: relative;
+    z-index: 10;
+
+  }
+
+  &__label {
+
+    &:hover {
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+
+  &__input {
+    display: none; // Hides radio buttons
+  }
+
+  &__header-box {
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+    position: relative;
+    backface-visibility: hidden;
+    transition: all .3s ease;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid $color-primary;
+
+    &:first-child {
+      background-color: $color-grey-a-dk;
+    }
+  }
+}

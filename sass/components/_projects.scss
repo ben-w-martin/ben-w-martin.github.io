@@ -8,6 +8,15 @@
 
   &__title {
     text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__project {
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid $color-grey-a-dk;
+    }
   }
 }
 

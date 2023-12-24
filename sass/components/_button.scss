@@ -37,6 +37,33 @@
     position: absolute;
     top: 3rem;
     right: 3rem;
+    display: inline-block;
+    border-radius: 0;
+    transform: scale(.75);
+    clip-path: polygon(0 50%, 20% 0, 20% 20%, 100% 20%, 100% 80%, 20% 80%, 20% 100%, 0 50%);
+
+    &--arrow {
+      display: none;
+      transition: all .2s ease;
+    }
+
+    &:hover {
+      border-radius: 50px;
+      clip-path: none;
+    }
+
+    &:hover &--arrow {
+      display: inline-block;
+      transform: scale(1);
+      margin-right: 1rem;
+    }
+    &:hover &--text {
+      display: inline-block;
+    }
+
+    &--text {
+      display: none;
+    }
   }
 }
 

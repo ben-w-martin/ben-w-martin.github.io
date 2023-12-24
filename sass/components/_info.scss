@@ -1,0 +1,15 @@
+.info {
+  padding: 5rem 10rem;
+  background-color: $color-grey-a-dk;
+  border-right: 1px solid $color-primary;
+  margin-top: -1px;
+
+  &__box {
+    padding: 0 3rem;
+    border-left: 1px solid $color-primary;
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+}

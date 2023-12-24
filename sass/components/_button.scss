@@ -31,6 +31,13 @@
     transform: translateY(0) scale(1.02);
     //box-shadow: 0 1rem 3rem rgba(0, 0, 0, .3);
   }
+
+  //BACK BUTTON
+  &__back {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
 }
 
 @keyframes leftRight {

@@ -1,16 +1,17 @@
 "use strict";
-// import renderProjects from "./projects.js"
 
-// ABOUT TAB SWITCHER
+// CONSTANTS
 const tabs = document.querySelectorAll(".tabs__input");
 const infoBlocks = document.querySelectorAll(".info__box");
 const headerBoxes = document.querySelectorAll(".tabs__header-box");
+const exampleImg = document.querySelectorAll(".example-img");
 const projBtn = document.querySelector(".btn__proj");
 const projBtn2 = document.querySelector(".btn__proj2");
 const backBtn = document.querySelector(".btn__back");
+const modalBg = document.querySelector(".modal");
 
 // FUNCTIONS
-function projListener(e) {
+function projListener(e) { // Directs to project "page"
     e.preventDefault(e);
     const tabs = document.querySelector(".tabs");
     const info = document.querySelector(".info");
@@ -18,10 +19,9 @@ function projListener(e) {
     tabs.style.display = "none";
     info.style.display = "none";
     projects.style.display = "block";
-    // renderProjects();
 }
 
-function backListener(e) {
+function backListener(e) { // Directs to home
     e.preventDefault();
     const tabs = document.querySelector(".tabs");
     const info = document.querySelector(".info");
@@ -31,8 +31,35 @@ function backListener(e) {
     info.style.display = "block";
 }
 
+function exitModal(e) {
+    modalBg.style.display = "none";
+    if (e.target || !e.target) {
+        exampleImg.forEach(img => {
+            img.removeEventListener("click", imageScaler);
+            img.addEventListener("click", imageScaler);
+            img.style.transform = "translate(-50%, -50%) scale(1)";
+            img.style.top = "";
+            img.style.left = "";
+            img.style.zIndex = "0";
+        });
+    }
+}
+
+function imageScaler() {
+    this.removeEventListener("click", imageScaler);
+
+    modalBg.style.display = "block";
+    this.style.transform = "translate(-50%, -50%) scale(2.5)";
+    this.style.top = "50%";
+    this.style.left = "50%";
+    this.style.zIndex = "30";
+
+    this.removeEventListener("click", exitModal);
+    this.addEventListener("click", exitModal);
+}
+
 // EVENT LISTENERS
-for (let i = 0; i < tabs.length; i++) {
+for (let i = 0; i < tabs.length; i++) { // Adds Ev. listeners to tabs
     tabs[i].addEventListener("change", function () {
         infoBlocks.forEach(block => {
             block.style.display = "none";
@@ -44,6 +71,10 @@ for (let i = 0; i < tabs.length; i++) {
         infoBlocks[i].style.display = "block";
     });
 }
+
+exampleImg.forEach(img => { // Ev. listeners to example images
+    img.addEventListener("click", imageScaler);
+});
 
 projBtn.addEventListener("click", projListener);
 projBtn2.addEventListener("click", projListener);

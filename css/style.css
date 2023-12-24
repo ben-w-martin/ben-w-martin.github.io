@@ -461,6 +461,7 @@ body {
 .trillo__photo--img {
   position: relative;
   transform: translate(-50%, -50%) scale(1);
+  transform-origin: center;
   border: 2px solid #eeeeee;
   border-radius: 3px;
   width: 40%;
@@ -521,6 +522,17 @@ body {
   border-left: 1px solid #FF4500;
 }
 .info__box:not(:first-child) {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
   display: none;
 }
 

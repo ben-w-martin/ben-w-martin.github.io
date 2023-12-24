@@ -1,9 +1,9 @@
 .about__container {
   background-color: $color-black;
-  height: 75%;
   padding: 10rem 8rem;
   display: flex;
   justify-content: center;
+  //min-height: 100vh;
 }
 
 //ABOUT*****************************************************************************
@@ -11,7 +11,6 @@
   border-left: 1px solid $color-primary;
   width: 100%;
   max-width: 100rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

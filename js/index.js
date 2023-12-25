@@ -33,9 +33,9 @@ function backListener(e) { // Directs to home
 
 function exitModal(e) {
     modalBg.style.display = "none";
-    if (e.target || !e.target) {
+    e.target.removeEventListener("click", imageScaler);
+    if (e.target) {
         exampleImg.forEach(img => {
-            img.removeEventListener("click", imageScaler);
             img.addEventListener("click", imageScaler);
             img.style.transform = "translate(-50%, -50%) scale(1)";
             img.style.top = "";
@@ -47,15 +47,14 @@ function exitModal(e) {
 
 function imageScaler() {
     this.removeEventListener("click", imageScaler);
-
     modalBg.style.display = "block";
-    this.style.transform = "translate(-50%, -50%) scale(2.5)";
+    this.style.transform = "translate(-50%, -50%) scale(3)";
     this.style.top = "50%";
     this.style.left = "50%";
     this.style.zIndex = "30";
 
-    this.removeEventListener("click", exitModal);
-    this.addEventListener("click", exitModal);
+    modalBg.removeEventListener("click", exitModal);
+    modalBg.addEventListener("click", exitModal);
 }
 
 // EVENT LISTENERS

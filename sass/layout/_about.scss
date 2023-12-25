@@ -3,7 +3,10 @@
   padding: 10rem 8rem;
   display: flex;
   justify-content: center;
-  //min-height: 100vh;
+
+  @include respond(tab-port) {
+    padding: 5rem 3rem;
+  }
 }
 
 //ABOUT*****************************************************************************

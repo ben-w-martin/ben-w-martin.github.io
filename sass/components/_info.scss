@@ -8,8 +8,12 @@
     padding: 3rem 5rem;
   }
 
+  @include respond(phone) {
+    padding: 3rem 0;
+  }
+
   &__box {
-    padding: 0 3rem;
+    padding: 0 2rem;
     border-left: 1px solid $color-primary;
 
     &:not(:first-child) {

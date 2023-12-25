@@ -93,6 +93,13 @@
       display: flex;
 
       transform: translate(-50%, -50%);
+
+      @include respond(tab-port) {
+      }
+
+      //@include respond(phone) {
+      //  flex-direction: column;
+      //}
     }
 
     &--item {
@@ -116,6 +123,14 @@
 
       &:not(:last-child) {
         margin-right: 7rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 1.8rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.6rem;
       }
     }
 

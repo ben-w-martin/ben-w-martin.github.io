@@ -6,6 +6,10 @@
   margin-top: -1px;
   position: relative;
 
+  @include respond(tab-port) {
+    padding: 5rem 3rem;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 2rem;
@@ -58,6 +62,7 @@
     &--img {
       position: relative;
       transform: translate(-50%, -50%) scale(1);
+      transform-origin: center;
 
       border: 2px solid $color-white;
       border-radius: 3px;

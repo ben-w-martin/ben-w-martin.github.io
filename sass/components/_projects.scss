@@ -10,6 +10,10 @@
     padding: 5rem 3rem;
   }
 
+  @include respond(phone) {
+    padding: 3rem 2rem;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 2rem;

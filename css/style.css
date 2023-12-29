@@ -453,28 +453,20 @@ body {
   top: 3rem;
   right: 3rem;
   display: inline-block;
-  border-radius: 0;
-  transform: scale(0.75);
-  clip-path: polygon(0 50%, 20% 0, 20% 20%, 100% 20%, 100% 80%, 20% 80%, 20% 100%, 0 50%);
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  transform: translateY(0) scale(1);
 }
 .btn__back--arrow {
-  display: none;
-  transition: all 0.2s ease;
+  transform: translateX(0);
+  transition: all 0.3s ease;
 }
 .btn__back:hover {
-  border-radius: 50px;
-  clip-path: none;
+  transform: translateY(-0.3rem) scale(1.05);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
 }
 .btn__back:hover .btn__back--arrow {
-  display: inline-block;
-  transform: scale(1);
   margin-right: 1rem;
-}
-.btn__back:hover .btn__back--text {
-  display: inline-block;
-}
-.btn__back--text {
-  display: none;
 }
 
 .projects {
@@ -548,7 +540,6 @@ body {
   width: 40%;
   top: 50%;
   left: 50%;
-  cursor: pointer;
   transition: all 0.2s ease;
 }
 .natours__photo--img:hover,

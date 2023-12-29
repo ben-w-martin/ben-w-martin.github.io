@@ -67,3 +67,10 @@ $break arg choices:
   }
 }
 
+@mixin subtext {
+  font-family: 'Sono', monospace;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: $color-grey;
+}
+

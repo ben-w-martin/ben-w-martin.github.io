@@ -44,5 +44,11 @@
     &:first-child {
       background-color: $color-grey-a-dk;
     }
+
+    @include respond(phone) {
+      border: none;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
   }
 }

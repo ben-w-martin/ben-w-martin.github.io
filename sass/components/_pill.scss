@@ -7,7 +7,6 @@
   background-color: $color-black;
   border-radius: 100rem;
   height: 100%;
-  min-height: 25rem;
   max-height: 30rem;
   flex-direction: column;
   width: 95%;
@@ -17,9 +16,21 @@
   transition: all .6s ease;
   backface-visibility: hidden;
 
+  @include respond(tab-port) {
+    max-height: 25rem;
+  }
+
+  @include respond(phone) {
+    max-height: 20rem;
+  }
+
   //ANIMATIONS----------------------------------------------------------------------
   &:hover {
     transform: translate(-50%, -15rem) scale(1.05);
+
+    @include respond(phone) {
+      transform: translate(-50%, -50%) scale(1) !important;
+    }
   }
   &:hover + .bar {
     opacity: 0;
@@ -34,7 +45,6 @@
   @include respond(desktop) {
     min-height: 20rem;
   }
-
 
   @include respond(tab-land){
     width: 80%;
@@ -79,6 +89,13 @@
         margin-top: 2rem;
       }
     }
+
+    @include respond(phone) {
+      margin: 0 auto;
+      margin-top: .8rem;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -91,15 +108,9 @@
       top: 20%;
       left: 50%;
       display: flex;
+      justify-content: space-evenly;
 
       transform: translate(-50%, -50%);
-
-      @include respond(tab-port) {
-      }
-
-      //@include respond(phone) {
-      //  flex-direction: column;
-      //}
     }
 
     &--item {
@@ -123,6 +134,10 @@
 
       &:not(:last-child) {
         margin-right: 7rem;
+
+        @include respond(phone) {
+          margin-right: .8rem;
+        }
       }
 
       @include respond(tab-port) {
@@ -158,6 +173,11 @@
     box-shadow: 0 0 0 0 rgba($color-secondary-xlt, .3);
     transition: all .8s cubic-bezier(0, 0, 0.35, 1.53);
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      background-color: $color-secondary-xlt;
+      transform: translate(-50%, -50%);
+    }
   }
 
   // Color Bar Animation
@@ -165,6 +185,10 @@
     background-color: $color-secondary-xlt;
     box-shadow: 0 0 1.5rem 1rem rgba($color-secondary-xlt, .3);
     transform: translate(-50%, -3rem);
+
+    @include respond(phone) {
+      transform: translate(-50%, -50%) !important;
+    }
   }
 
 }

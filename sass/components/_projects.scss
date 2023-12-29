@@ -36,13 +36,15 @@
     margin-top: -1rem;
 
     &--tag {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: $color-grey;
+      @include subtext;
 
       &:hover {
         color: $color-secondary-xlt;
       }
+    }
+
+    @include respond(phone) {
+      margin-bottom: 1rem;
     }
   }
 
@@ -52,6 +54,10 @@
     &:visited {
       text-decoration: none;
       color: inherit;
+
+      @include respond(tab-port) {
+        color: $color-secondary-xlt;
+      }
     }
 
     &:hover {
@@ -63,6 +69,10 @@
     position: relative;
     height: 25rem;
     width: 100%;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     &--img {
       position: relative;
@@ -98,16 +108,26 @@
       justify-content: end;
       opacity: 0;
       height: 6rem;
-      width: 25rem;
+      width: 30%;
+      min-width: 20rem;
       top: 50%;
       left: 50%;
       padding-right: 2rem;
+      padding-left: 3rem;
       clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 15% 60%, 0 50%, 15% 40%);
       animation: floatUpDown 2s infinite;
       backface-visibility: hidden;
 
       transform: translate(18rem, -50%) scale(1);
       transition: all .2s ease;
+
+      @include respond(tab-land) {
+        padding-left: 4.5rem;
+      }
+
+      @include respond(tab-port) {
+        display: none;
+      }
     }
 
     &:hover &--view { // brings in dialog box -- view projects link

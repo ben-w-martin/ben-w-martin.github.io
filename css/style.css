@@ -24,15 +24,15 @@ $break arg choices:
 }
 @keyframes floatUpDown {
   0% {
-    transform: translate(20rem, -50%) scale(1);
+    transform: translate(18rem, -50%) scale(1);
     background-color: #a1a1a1;
   }
   50% {
-    transform: translate(20rem, -75%) scale(1);
+    transform: translate(18rem, -75%) scale(1);
     background-color: #c7c7c7;
   }
   100% {
-    transform: translate(20rem, -50%) scale(1);
+    transform: translate(18rem, -50%) scale(1);
     background-color: #a1a1a1;
   }
 }
@@ -566,7 +566,7 @@ body {
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 15% 60%, 0 50%, 15% 40%);
   animation: floatUpDown 2s infinite;
   backface-visibility: hidden;
-  transform: translate(20rem, -50%) scale(1);
+  transform: translate(18rem, -50%) scale(1);
   transition: all 0.2s ease;
 }
 .natours__photo:hover .natours__photo--view,
@@ -584,6 +584,13 @@ body {
   color: #141414;
   font-size: inherit;
   font-weight: 300;
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+.natours__photo--link:hover, .natours__photo--link:active,
+.trillo__photo--link:hover,
+.trillo__photo--link:active {
+  transform: scale(1.04);
 }
 
 .tabs {

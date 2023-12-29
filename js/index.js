@@ -31,31 +31,6 @@ function backListener(e) { // Directs to home
     info.style.display = "block";
 }
 
-// function exitModal(e) {
-//     modalBg.style.display = "none";
-//     e.target.removeEventListener("click", imageScaler);
-//         exampleImg.forEach(img => {
-//             img.addEventListener("click", imageScaler);
-//             // img.style.position = "fixed";
-//             img.style.transform = "translate(-50%, -50%) scale(1)";
-//             img.style.top = "";
-//             img.style.left = "";
-//             img.style.zIndex = "0";
-//         });
-// }
-//
-// function imageScaler() {
-//     this.removeEventListener("click", imageScaler);
-//     modalBg.style.display = "block";
-//     this.style.transform = "translate(-50%, -50%) scale(3)";
-//     this.style.top = "50%";
-//     this.style.left = "50%";
-//     this.style.zIndex = "30";
-//
-//     modalBg.removeEventListener("click", exitModal);
-//     modalBg.addEventListener("click", exitModal);
-// }
-
 // EVENT LISTENERS
 for (let i = 0; i < tabs.length; i++) { // Adds Ev. listeners to tabs
     tabs[i].addEventListener("change", function () {
@@ -69,10 +44,6 @@ for (let i = 0; i < tabs.length; i++) { // Adds Ev. listeners to tabs
         infoBlocks[i].style.display = "block";
     });
 }
-//
-// exampleImg.forEach(img => { // Ev. listeners to example images
-//     img.addEventListener("click", imageScaler);
-// });
 
 projBtn.addEventListener("click", projListener);
 projBtn2.addEventListener("click", projListener);

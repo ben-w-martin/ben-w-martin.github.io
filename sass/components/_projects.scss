@@ -30,6 +30,7 @@
 
 .natours,
 .trillo {
+  transition: all .2s ease;
 
   &__tags {
     margin-top: -1rem;
@@ -59,8 +60,8 @@
   }
 
   &__photo {
-    margin-top: 10rem;
     position: relative;
+    height: 25rem;
     width: 100%;
 
     &--img {
@@ -71,7 +72,7 @@
       border: 2px solid $color-white;
       border-radius: 3px;
       width: 40%;
-      //top: 100%;
+      top: 50%;
       left: 50%;
       cursor: pointer;
       transition: all .2s ease;
@@ -85,23 +86,60 @@
 
     &--img:last-of-type {
       position: absolute;
-      width: 6.5rem;
-      top: 5rem;
+      width: 8%;
+      top: 60%;
       left: 60%;
+    }
+
+    &--view {
+      background-color: $color-grey-lt;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      opacity: 0;
+      height: 6rem;
+      width: 25rem;
+      top: 50%;
+      left: 50%;
+      padding-right: 2rem;
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 15% 60%, 0 50%, 15% 40%);
+      animation: floatUpDown 2s infinite;
+      backface-visibility: hidden;
+
+      transform: translate(20rem, -50%) scale(1);
+      transition: all .2s ease;
+    }
+
+    &:hover &--view { // brings in dialog box -- view projects link
+      opacity: 1;
+    }
+
+    &--link:link,
+    &--link:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-black;
+      font-size: inherit;
+      font-weight: 300;
     }
   }
 }
 
-.natours {
 
-  &__link {
 
-  }
-}
-
-.trillo {
-
-  &__link {
-
-  }
-}
+//
+//.natours {
+//
+//  &__link {
+//
+//  }
+//}
+//
+//.trillo {
+//
+//  &__link {
+//
+//  }
+//}

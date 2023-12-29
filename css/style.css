@@ -14,6 +14,28 @@ $break arg choices:
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://use.typekit.net/gxb2jpb.css");
+@keyframes leftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1rem);
+  }
+}
+@keyframes floatUpDown {
+  0% {
+    transform: translate(20rem, -50%) scale(1);
+    background-color: #a1a1a1;
+  }
+  50% {
+    transform: translate(20rem, -75%) scale(1);
+    background-color: #c7c7c7;
+  }
+  100% {
+    transform: translate(20rem, -50%) scale(1);
+    background-color: #a1a1a1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -455,14 +477,6 @@ body {
   display: none;
 }
 
-@keyframes leftRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(1rem);
-  }
-}
 .projects {
   display: none;
   padding: 5rem 10rem;
@@ -490,6 +504,10 @@ body {
   border-bottom: 1px solid rgba(98, 98, 98, 0.2);
 }
 
+.natours,
+.trillo {
+  transition: all 0.2s ease;
+}
 .natours__tags,
 .trillo__tags {
   margin-top: -1rem;
@@ -516,8 +534,8 @@ body {
 }
 .natours__photo,
 .trillo__photo {
-  margin-top: 10rem;
   position: relative;
+  height: 25rem;
   width: 100%;
 }
 .natours__photo--img,
@@ -528,6 +546,7 @@ body {
   border: 2px solid #eeeeee;
   border-radius: 3px;
   width: 40%;
+  top: 50%;
   left: 50%;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -541,9 +560,44 @@ body {
 .natours__photo--img:last-of-type,
 .trillo__photo--img:last-of-type {
   position: absolute;
-  width: 6.5rem;
-  top: 5rem;
+  width: 8%;
+  top: 60%;
   left: 60%;
+}
+.natours__photo--view,
+.trillo__photo--view {
+  background-color: rgb(161, 161, 161);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  opacity: 0;
+  height: 6rem;
+  width: 25rem;
+  top: 50%;
+  left: 50%;
+  padding-right: 2rem;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 15% 60%, 0 50%, 15% 40%);
+  animation: floatUpDown 2s infinite;
+  backface-visibility: hidden;
+  transform: translate(20rem, -50%) scale(1);
+  transition: all 0.2s ease;
+}
+.natours__photo:hover .natours__photo--view,
+.natours__photo:hover .trillo__photo--view,
+.trillo__photo:hover .natours__photo--view,
+.trillo__photo:hover .trillo__photo--view {
+  opacity: 1;
+}
+.natours__photo--link:link, .natours__photo--link:visited,
+.trillo__photo--link:link,
+.trillo__photo--link:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #141414;
+  font-size: inherit;
+  font-weight: 300;
 }
 
 .tabs {

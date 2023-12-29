@@ -12,6 +12,8 @@
 
   @include respond(phone) {
     padding: 3rem 2rem;
+    border-right: none;
+
   }
 
   &__title {
@@ -37,6 +39,10 @@
 
     &--tag {
       @include subtext;
+
+      &:not(:last-of-type)::after {
+        content: " \22C5";
+      }
 
       &:hover {
         color: $color-secondary-xlt;

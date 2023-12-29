@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   Breakpoints:
   - Up to 600px width     Phone
@@ -95,7 +96,7 @@ html {
 }
 @media only screen and (max-width: 56.25em) {
   .heading-secondary {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -106,17 +107,17 @@ html {
 
 .heading-tertiary {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   line-height: 4rem;
 }
 @media only screen and (max-width: 56.25em) {
   .heading-tertiary {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .heading-tertiary {
-    font-size: 2.5rem;
+    font-size: 3.8rem;
   }
 }
 
@@ -125,15 +126,16 @@ body {
   color: #eeeeee;
   font-size: 1.8rem;
   line-height: 4rem;
+  font-weight: 300;
 }
 @media only screen and (max-width: 56.25em) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   body {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -547,6 +549,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .projects {
     padding: 3rem 2rem;
+    border-right: none;
   }
 }
 .projects__title {
@@ -569,9 +572,13 @@ body {
 .natours__tags--tag,
 .trillo__tags--tag {
   font-family: "Sono", monospace;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 200;
   color: rgb(128, 128, 128);
+}
+.natours__tags--tag:not(:last-of-type)::after,
+.trillo__tags--tag:not(:last-of-type)::after {
+  content: " ⋅";
 }
 .natours__tags--tag:hover,
 .trillo__tags--tag:hover {
@@ -824,7 +831,8 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .about__container {
-    padding: 3rem 0;
+    padding: 0;
+    padding-top: 3rem;
   }
 }
 
@@ -838,6 +846,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .about {
     border: none;
+    height: 100%;
   }
 }
 

@@ -14,6 +14,28 @@ $break arg choices:
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://use.typekit.net/gxb2jpb.css");
+@keyframes leftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1rem);
+  }
+}
+@keyframes floatUpDown {
+  0% {
+    transform: translate(18rem, -50%) scale(1);
+    background-color: #a1a1a1;
+  }
+  50% {
+    transform: translate(18rem, -75%) scale(1);
+    background-color: #c7c7c7;
+  }
+  100% {
+    transform: translate(18rem, -50%) scale(1);
+    background-color: #a1a1a1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -301,11 +323,6 @@ body {
   box-shadow: 0 0 1.5rem 1rem rgba(0, 255, 246, 0.3);
   transform: translate(-50%, -3rem);
 }
-@media only screen and (max-width: 75em) {
-  .pill:hover .pill__bar {
-    transform: translate(-50%, -4rem);
-  }
-}
 
 .bar {
   position: absolute;
@@ -431,38 +448,22 @@ body {
   top: 3rem;
   right: 3rem;
   display: inline-block;
-  border-radius: 0;
-  transform: scale(0.75);
-  clip-path: polygon(0 50%, 20% 0, 20% 20%, 100% 20%, 100% 80%, 20% 80%, 20% 100%, 0 50%);
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  transform: translateY(0) scale(1);
 }
 .btn__back--arrow {
-  display: none;
-  transition: all 0.2s ease;
+  transform: translateX(0);
+  transition: all 0.3s ease;
 }
 .btn__back:hover {
-  border-radius: 50px;
-  clip-path: none;
+  transform: translateY(-0.3rem) scale(1.05);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
 }
 .btn__back:hover .btn__back--arrow {
-  display: inline-block;
-  transform: scale(1);
   margin-right: 1rem;
 }
-.btn__back:hover .btn__back--text {
-  display: inline-block;
-}
-.btn__back--text {
-  display: none;
-}
 
-@keyframes leftRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(1rem);
-  }
-}
 .projects {
   display: none;
   padding: 5rem 10rem;
@@ -490,6 +491,10 @@ body {
   border-bottom: 1px solid rgba(98, 98, 98, 0.2);
 }
 
+.natours,
+.trillo {
+  transition: all 0.2s ease;
+}
 .natours__tags,
 .trillo__tags {
   margin-top: -1rem;
@@ -516,8 +521,8 @@ body {
 }
 .natours__photo,
 .trillo__photo {
-  margin-top: 10rem;
   position: relative;
+  height: 25rem;
   width: 100%;
 }
 .natours__photo--img,
@@ -528,8 +533,8 @@ body {
   border: 2px solid #eeeeee;
   border-radius: 3px;
   width: 40%;
+  top: 50%;
   left: 50%;
-  cursor: pointer;
   transition: all 0.2s ease;
 }
 .natours__photo--img:hover,
@@ -541,9 +546,51 @@ body {
 .natours__photo--img:last-of-type,
 .trillo__photo--img:last-of-type {
   position: absolute;
-  width: 6.5rem;
-  top: 5rem;
+  width: 8%;
+  top: 60%;
   left: 60%;
+}
+.natours__photo--view,
+.trillo__photo--view {
+  background-color: rgb(161, 161, 161);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  opacity: 0;
+  height: 6rem;
+  width: 25rem;
+  top: 50%;
+  left: 50%;
+  padding-right: 2rem;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 15% 60%, 0 50%, 15% 40%);
+  animation: floatUpDown 2s infinite;
+  backface-visibility: hidden;
+  transform: translate(18rem, -50%) scale(1);
+  transition: all 0.2s ease;
+}
+.natours__photo:hover .natours__photo--view,
+.natours__photo:hover .trillo__photo--view,
+.trillo__photo:hover .natours__photo--view,
+.trillo__photo:hover .trillo__photo--view {
+  opacity: 1;
+}
+.natours__photo--link:link, .natours__photo--link:visited,
+.trillo__photo--link:link,
+.trillo__photo--link:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #141414;
+  font-size: inherit;
+  font-weight: 300;
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+.natours__photo--link:hover, .natours__photo--link:active,
+.trillo__photo--link:hover,
+.trillo__photo--link:active {
+  transform: scale(1.04);
 }
 
 .tabs {
@@ -554,8 +601,22 @@ body {
   position: relative;
   z-index: 10;
 }
-.tabs__label:hover {
-  border-bottom: 1px solid #FF4500;
+.tabs__label {
+  position: relative;
+}
+.tabs__label::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  background-color: #FF4500;
+  transform: scale(0);
+  transform-origin: 50%;
+  transition: all 0.3s ease;
+}
+.tabs__label:hover::before {
+  transform: scale(1);
 }
 .tabs__input {
   display: none;

@@ -5,13 +5,25 @@
   &__header {
     position: relative;
     z-index: 10;
-
   }
 
   &__label {
+    position: relative;
 
-    &:hover {
-      border-bottom: 1px solid $color-primary;
+    &::before {
+      content: "";
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      bottom: -1px;
+      background-color: $color-primary;
+      transform: scale(0);
+      transform-origin: 50%;
+      transition: all .3s ease;
+    }
+
+    &:hover::before {
+      transform: scale(1);
     }
   }
 

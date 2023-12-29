@@ -165,10 +165,6 @@
     background-color: $color-secondary-xlt;
     box-shadow: 0 0 1.5rem 1rem rgba($color-secondary-xlt, .3);
     transform: translate(-50%, -3rem);
-
-    @include respond(tab-land) {
-      transform: translate(-50%, -4rem);
-    }
   }
 
 }

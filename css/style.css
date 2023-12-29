@@ -323,11 +323,6 @@ body {
   box-shadow: 0 0 1.5rem 1rem rgba(0, 255, 246, 0.3);
   transform: translate(-50%, -3rem);
 }
-@media only screen and (max-width: 75em) {
-  .pill:hover .pill__bar {
-    transform: translate(-50%, -4rem);
-  }
-}
 
 .bar {
   position: absolute;
@@ -599,8 +594,22 @@ body {
   position: relative;
   z-index: 10;
 }
-.tabs__label:hover {
-  border-bottom: 1px solid #FF4500;
+.tabs__label {
+  position: relative;
+}
+.tabs__label::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  background-color: #FF4500;
+  transform: scale(0);
+  transform-origin: 50%;
+  transition: all 0.3s ease;
+}
+.tabs__label:hover::before {
+  transform: scale(1);
 }
 .tabs__input {
   display: none;

@@ -2,4 +2,8 @@
   height: 95dvh;
   background-image: linear-gradient(to bottom right, $color-primary, $color-primary-dk);
 
+  @include respond(phone) {
+    height: 50vh;
+    position: relative;
+  }
 }

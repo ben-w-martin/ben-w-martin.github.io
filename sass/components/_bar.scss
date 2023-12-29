@@ -11,11 +11,15 @@
   backface-visibility: hidden;
 
   @include respond(tab-land) {
-    height: 40%;
+    height: 50%;
   }
 
   @include respond(tab-port) {
-    height: 35%;
+    height: 40%;
+  }
+
+  @include respond(phone) {
+    height: 30%;
   }
 
   &__1 {

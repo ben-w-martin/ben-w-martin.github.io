@@ -20,6 +20,10 @@
   max-width: 100rem;
   display: flex;
   flex-direction: column;
+
+  @include respond(phone) {
+    border: none;
+  }
 }
 
 .cta {

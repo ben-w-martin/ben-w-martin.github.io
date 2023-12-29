@@ -1,9 +1,9 @@
 .header {
-  height: 95dvh;
+  height: 95vh;
   background-image: linear-gradient(to bottom right, $color-primary, $color-primary-dk);
 
   @include respond(phone) {
-    height: 50vh;
+    height: 80dvh;
     position: relative;
   }
 }

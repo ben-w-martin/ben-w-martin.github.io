@@ -1,16 +1,51 @@
 .btn {
-  margin: 0 auto;
-  margin-top: 3rem;
-  background-image: linear-gradient(to right, $color-primary, $color-primary-dk);
-  border-radius: 100px;
-  border: none;
-  color: $color-white;
-  font-family: inherit;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  padding: 1.5rem 4rem;
-  transform: translateY(0) scale(1);
-  transition: transform .5s ease;
+
+  &,
+  &:link,
+  &:visited {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dk);
+    border-radius: 100px;
+    border: none;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: .5rem 3rem;
+    transform: translateY(0) scale(1);
+    transition: transform .5s ease;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    transform: scale(1);
+    opacity: 1;
+    transition: all .4s;
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dk);
+
+    @include respond(tab-port) {
+      opacity: 0;
+    }
+  }
+
+  &:active::after {
+    opacity: 0;
+    transform: scale(1.5);
+
+    @include respond(tab-port) {
+      opacity: 1;
+    }
+  }
 
   @include respond(phone) {
     padding: 1rem 2rem;
@@ -39,7 +74,7 @@
   //BACK BUTTON
   &__back {
     position: absolute;
-    top: 3rem;
+    top: 1.5rem;
     right: 3rem;
     display: inline-block;
     border-radius: 50px;
@@ -49,7 +84,7 @@
     @include respond(tab-port) {
       background-image: none;
       background-color: transparent;
-      top: 2rem;
+      top: 1rem;
       right: 2rem;
 
       & > * {
@@ -60,7 +95,7 @@
     @include respond(phone) {
       background-image: none;
       background-color: transparent;
-      top: 1rem;
+      top: -1rem;
       right: 1rem;
 
       & > * {

@@ -124,8 +124,8 @@
       backface-visibility: hidden;
 
       &:hover {
-        background-color: $color-primary;
-        transform: translateY(-.2rem) scale(1.01);
+        background-image: linear-gradient(to right, $color-primary, $color-primary-dk);
+        transform: translateY(-.2rem) scale(1.02);
       }
 
       &:active {
@@ -185,6 +185,10 @@
     background-color: $color-secondary-xlt;
     box-shadow: 0 0 1.5rem 1rem rgba($color-secondary-xlt, .3);
     transform: translate(-50%, -3rem);
+
+    @include respond(tab-port) {
+      transform: translate(-50%, -2rem);
+    }
 
     @include respond(phone) {
       transform: translate(-50%, -50%) !important;

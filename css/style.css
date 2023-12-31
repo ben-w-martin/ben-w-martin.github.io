@@ -84,7 +84,7 @@ html {
   font-family: "bd-geminis", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 9rem;
+  font-size: 8rem;
   color: #eeeeee;
   line-height: 8rem;
 }
@@ -206,7 +206,7 @@ body {
   width: 95%;
   max-width: 92rem;
   z-index: 10;
-  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
   transition: all 0.6s ease;
   backface-visibility: hidden;
 }
@@ -219,6 +219,7 @@ body {
   .pill {
     max-height: 20rem;
     animation: floatUpDown2 2s infinite ease;
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.5);
   }
 }
 .pill:hover {
@@ -864,7 +865,53 @@ body {
 .footer {
   background-color: #141414;
   text-align: center;
-  margin-top: -4rem;
+  margin-top: -10rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    margin-top: 0;
+  }
+}
+
+.contact {
+  padding: 5rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact {
+    padding: 3rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .contact {
+    padding: 2rem 0;
+  }
+}
+.contact > * {
+  display: inline-block;
+  padding: 0 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact > * {
+    display: block;
+  }
+}
+.contact > *:hover {
+  color: #00fff6;
+}
+.contact > *, .contact > *:link, .contact > *:visited {
+  font-family: "Sono", monospace;
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+}
+.contact > *:hover, .contact > *:active {
+  color: #00fff6;
 }
 
 .about__container {

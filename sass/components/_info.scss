@@ -4,6 +4,10 @@
   border-right: 1px solid $color-primary;
   margin-top: -1px;
 
+  & * {
+    font-size: inherit;
+  }
+
   @include respond(tab-port) {
     padding: 3rem 5rem;
   }
@@ -33,12 +37,20 @@
       display: flex;
       flex-wrap: wrap;
     }
+
     &--skill {
       flex: 0 0 50%;
       list-style: none;
 
       @include respond(phone) {
         flex: 0 0 100%;
+        padding-left: 1rem;
+        border-radius: 3px;
+
+        &:nth-of-type(odd) {
+          background-color: $color-grey-a-dk;
+          //text-align: right;
+        }
       }
     }
   }

@@ -19,7 +19,7 @@
   }
 
   @include respond(phone) {
-    height: 30%;
+    display: none;
   }
 
   &__1 {

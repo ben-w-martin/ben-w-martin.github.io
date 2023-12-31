@@ -24,3 +24,17 @@
     background-color: lighten($color-grey-lt, 0);
   }
 }
+
+@keyframes floatUpDown2 {
+  0% {
+    transform: translate(-50%, -45%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -55%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -45%) scale(1);
+  }
+}

@@ -37,6 +37,17 @@ $break arg choices:
     background-color: #a1a1a1;
   }
 }
+@keyframes floatUpDown2 {
+  0% {
+    transform: translate(-50%, -45%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -55%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -45%) scale(1);
+  }
+}
 *,
 *::after,
 *::before {
@@ -131,13 +142,12 @@ body {
 @media only screen and (max-width: 56.25em) {
   body {
     font-size: 1.7rem;
-    letter-spacing: 0.15rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   body {
     font-size: 1.6rem;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -208,6 +218,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .pill {
     max-height: 20rem;
+    animation: floatUpDown2 2s infinite ease;
   }
 }
 .pill:hover {
@@ -303,6 +314,11 @@ body {
   transition: all 0.3s ease;
   backface-visibility: hidden;
 }
+@media only screen and (max-width: 37.5em) {
+  .pill__list--item {
+    padding: 0.3rem;
+  }
+}
 .pill__list--item:hover {
   background-image: linear-gradient(to right, #FF4500, #9d3200);
   transform: translateY(-0.2rem) scale(1.02);
@@ -392,7 +408,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .bar {
-    height: 30%;
+    display: none;
   }
 }
 .bar__1 {
@@ -536,17 +552,6 @@ body {
   transition: all 0.2s ease;
   transform: translateY(0) scale(1);
 }
-@media only screen and (max-width: 56.25em) {
-  .btn__back {
-    background-image: none;
-    background-color: transparent;
-    top: 1rem;
-    right: 2rem;
-  }
-  .btn__back > * {
-    color: rgb(128, 128, 128);
-  }
-}
 @media only screen and (max-width: 37.5em) {
   .btn__back {
     background-image: none;
@@ -565,6 +570,11 @@ body {
 .btn__back:hover {
   transform: translateY(-0.3rem) scale(1.05);
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 37.5em) {
+  .btn__back:hover {
+    box-shadow: none;
+  }
 }
 .btn__back:hover .btn__back--arrow {
   margin-right: 1rem;

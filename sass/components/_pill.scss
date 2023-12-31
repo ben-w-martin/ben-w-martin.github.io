@@ -22,6 +22,7 @@
 
   @include respond(phone) {
     max-height: 20rem;
+    animation: floatUpDown2 2s infinite ease;
   }
 
   //ANIMATIONS----------------------------------------------------------------------
@@ -122,6 +123,10 @@
       border-radius: 50rem;
       transition: all .3s ease;
       backface-visibility: hidden;
+
+      @include respond(phone) {
+        padding: .3rem;
+      }
 
       &:hover {
         background-image: linear-gradient(to right, $color-primary, $color-primary-dk);

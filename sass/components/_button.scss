@@ -81,17 +81,6 @@
     transition: all .2s ease;
     transform: translateY(0) scale(1);
 
-    @include respond(tab-port) {
-      background-image: none;
-      background-color: transparent;
-      top: 1rem;
-      right: 2rem;
-
-      & > * {
-        color: $color-grey;
-      }
-    }
-
     @include respond(phone) {
       background-image: none;
       background-color: transparent;
@@ -108,12 +97,13 @@
       transition: all .3s ease;
     }
 
-    &--text {
-    }
-
     &:hover {
       transform: translateY(-.3rem) scale(1.05);
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, .3);
+
+      @include respond(phone) {
+        box-shadow: none;
+      }
     }
 
     &:hover &--arrow {

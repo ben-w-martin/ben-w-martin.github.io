@@ -26,4 +26,20 @@
       border: none;
     }
   }
+
+  &__bio {
+
+    &--soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--skill {
+      flex: 0 0 50%;
+      list-style: none;
+
+      @include respond(phone) {
+        flex: 0 0 100%;
+      }
+    }
+  }
 }

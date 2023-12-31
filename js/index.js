@@ -19,14 +19,13 @@
         const info = document.querySelector(".info");
         const projects = document.querySelector(".projects");
 
-        window.scrollTo({
-            top: projects,
-            behavior: "smooth"
-        })
-
         tabs.style.display = "none";
         info.style.display = "none";
         projects.style.display = "block";
+
+        projects.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 
     function backListener(e) { // Directs to home

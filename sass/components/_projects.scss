@@ -35,6 +35,24 @@
 .trillo {
   transition: all .2s ease;
 
+  &__text {
+
+    &--link:link,
+    &--link:visited {
+      text-decoration: none;
+      color: inherit;
+
+      @include respond(phone) {
+        color: $color-secondary-xlt;
+      }
+    }
+
+    &--link:hover,
+    &--link:active {
+      color: $color-secondary-xlt;
+    }
+  }
+
   &__tags {
     margin-top: -1rem;
 

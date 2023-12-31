@@ -10,6 +10,7 @@
     const projBtn2 = document.querySelector(".btn__proj2");
     const backBtn = document.querySelector(".btn__back");
     const main = document.querySelector("#main");
+    const ctv = document.querySelectorAll(".ctv");
 
 // FUNCTIONS
     function projListener(e) { // Directs to project "page"

@@ -33,12 +33,15 @@
 
 .ctv { // click to view
   display: none;
+  transform: translateX(10rem);
+  transition: all .2s ease;
 
   @include respond(phone) {
-    display: inline-block;
     margin-left: 1rem;
-
+    transform: translateX(0);
     @include subtext;
+
+    animation: fadeInRight .3s ease;
   }
 }
 

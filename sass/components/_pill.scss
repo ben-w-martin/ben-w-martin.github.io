@@ -12,7 +12,7 @@
   width: 95%;
   max-width: 92rem;
   z-index: 10;
-  box-shadow: 0 2rem 8rem rgba(0, 0, 0, .3);
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, .4);
   transition: all .6s ease;
   backface-visibility: hidden;
 
@@ -23,6 +23,8 @@
   @include respond(phone) {
     max-height: 20rem;
     animation: floatUpDown2 2s infinite ease;
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, .5);
+
   }
 
   //ANIMATIONS----------------------------------------------------------------------

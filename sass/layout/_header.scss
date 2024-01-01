@@ -3,7 +3,7 @@
   background-image: linear-gradient(to bottom right, $color-primary, $color-primary-dk);
 
   @include respond(phone) {
-    height: 80dvh;
+    height: 80vh;
     position: relative;
   }
 }

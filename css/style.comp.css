@@ -637,32 +637,41 @@ body {
   }
 }
 
+.nexter,
 .natours,
 .trillo {
   transition: all 0.2s ease;
 }
-.natours__text--link:link, .natours__text--link:visited,
+.nexter__text--link:link, .nexter__text--link:visited,
+.natours__text--link:link,
+.natours__text--link:visited,
 .trillo__text--link:link,
 .trillo__text--link:visited {
   text-decoration: none;
   color: inherit;
 }
 @media only screen and (max-width: 37.5em) {
-  .natours__text--link:link, .natours__text--link:visited,
+  .nexter__text--link:link, .nexter__text--link:visited,
+  .natours__text--link:link,
+  .natours__text--link:visited,
   .trillo__text--link:link,
   .trillo__text--link:visited {
     color: #00fff6;
   }
 }
-.natours__text--link:hover, .natours__text--link:active,
+.nexter__text--link:hover, .nexter__text--link:active,
+.natours__text--link:hover,
+.natours__text--link:active,
 .trillo__text--link:hover,
 .trillo__text--link:active {
   color: #00fff6;
 }
+.nexter__tags,
 .natours__tags,
 .trillo__tags {
   margin-top: -1rem;
 }
+.nexter__tags--tag,
 .natours__tags--tag,
 .trillo__tags--tag {
   font-family: "Sono", monospace;
@@ -670,38 +679,47 @@ body {
   font-weight: 200;
   color: rgb(128, 128, 128);
 }
+.nexter__tags--tag:not(:last-of-type)::after,
 .natours__tags--tag:not(:last-of-type)::after,
 .trillo__tags--tag:not(:last-of-type)::after {
   content: " ⋅";
 }
+.nexter__tags--tag:hover,
 .natours__tags--tag:hover,
 .trillo__tags--tag:hover {
   color: #00fff6;
 }
 @media only screen and (max-width: 37.5em) {
+  .nexter__tags,
   .natours__tags,
   .trillo__tags {
     margin-bottom: 1rem;
   }
 }
-.natours__link:link, .natours__link:visited,
+.nexter__link:link, .nexter__link:visited,
+.natours__link:link,
+.natours__link:visited,
 .trillo__link:link,
 .trillo__link:visited {
   text-decoration: none;
   color: inherit;
 }
 @media only screen and (max-width: 56.25em) {
-  .natours__link:link, .natours__link:visited,
+  .nexter__link:link, .nexter__link:visited,
+  .natours__link:link,
+  .natours__link:visited,
   .trillo__link:link,
   .trillo__link:visited {
     text-decoration: underline;
     color: #00fff6;
   }
 }
+.nexter__link:hover,
 .natours__link:hover,
 .trillo__link:hover {
   text-decoration: underline;
 }
+.nexter__photo,
 .natours__photo,
 .trillo__photo {
   position: relative;
@@ -709,11 +727,13 @@ body {
   width: 100%;
 }
 @media only screen and (max-width: 37.5em) {
+  .nexter__photo,
   .natours__photo,
   .trillo__photo {
     display: none;
   }
 }
+.nexter__photo--img,
 .natours__photo--img,
 .trillo__photo--img {
   position: relative;
@@ -726,12 +746,14 @@ body {
   left: 50%;
   transition: all 0.2s ease;
 }
+.nexter__photo--img:hover,
 .natours__photo--img:hover,
 .trillo__photo--img:hover {
   transform: translate(-50%, -50%) scale(1.1);
   z-index: 10;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
+.nexter__photo--img:last-of-type,
 .natours__photo--img:last-of-type,
 .trillo__photo--img:last-of-type {
   position: absolute;
@@ -739,6 +761,7 @@ body {
   top: 60%;
   left: 60%;
 }
+.nexter__photo--view,
 .natours__photo--view,
 .trillo__photo--view {
   background-color: rgb(161, 161, 161);
@@ -761,24 +784,33 @@ body {
   transition: all 0.2s ease;
 }
 @media only screen and (max-width: 75em) {
+  .nexter__photo--view,
   .natours__photo--view,
   .trillo__photo--view {
     padding-left: 4.5rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
+  .nexter__photo--view,
   .natours__photo--view,
   .trillo__photo--view {
     display: none;
   }
 }
+.nexter__photo:hover .nexter__photo--view,
+.nexter__photo:hover .natours__photo--view,
+.nexter__photo:hover .trillo__photo--view,
+.natours__photo:hover .nexter__photo--view,
 .natours__photo:hover .natours__photo--view,
 .natours__photo:hover .trillo__photo--view,
+.trillo__photo:hover .nexter__photo--view,
 .trillo__photo:hover .natours__photo--view,
 .trillo__photo:hover .trillo__photo--view {
   opacity: 1;
 }
-.natours__photo--link:link, .natours__photo--link:visited,
+.nexter__photo--link:link, .nexter__photo--link:visited,
+.natours__photo--link:link,
+.natours__photo--link:visited,
 .trillo__photo--link:link,
 .trillo__photo--link:visited {
   display: inline-block;
@@ -790,7 +822,9 @@ body {
   transform: scale(1);
   transition: all 0.2s ease;
 }
-.natours__photo--link:hover, .natours__photo--link:active,
+.nexter__photo--link:hover, .nexter__photo--link:active,
+.natours__photo--link:hover,
+.natours__photo--link:active,
 .trillo__photo--link:hover,
 .trillo__photo--link:active {
   transform: scale(1.04);

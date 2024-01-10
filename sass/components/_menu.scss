@@ -1,0 +1,14 @@
+.menu {
+    height: 100vh;
+    
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-white;
+    }
+}

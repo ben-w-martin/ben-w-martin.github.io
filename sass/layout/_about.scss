@@ -1,13 +1,14 @@
 .about__container {
+
   background-color: $color-black;
   padding: 10rem 8rem;
   display: flex;
   justify-content: center;
-
+  
   @include respond(tab-port) {
     padding: 5rem 3rem;
   }
-
+  
   @include respond(phone) {
     padding: 0;
     padding-top: 3rem;
@@ -16,6 +17,8 @@
 
 //ABOUT*****************************************************************************
 .about {
+  // display: none; // REMOVE AFTER DEV
+
   border-left: 1px solid $color-primary;
   width: 100%;
   max-width: 100rem;

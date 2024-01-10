@@ -3,6 +3,8 @@
   background-color: $color-grey-a-dk;
   border-right: 1px solid $color-primary;
   margin-top: -1px;
+  
+  display: none; // DEV****
 
   & * {
     font-size: inherit;

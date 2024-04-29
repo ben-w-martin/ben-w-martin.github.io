@@ -1,0 +1,52 @@
+.footer {
+  background-color: $color-black;
+  text-align: center;
+  margin-top: -10rem;
+
+  @include respond(tab-port) {
+    margin-top: -5rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 0;
+  }
+}
+
+.contact {
+  padding: 5rem 0;
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 1rem 0;
+  }
+
+  & > * {
+    transition: all .2s;
+    display: inline-block;
+    padding: 0 1rem;
+
+    @include respond(phone) {
+      display: block;
+    }
+
+    &:hover {
+      color: $color-secondary-xlt;
+    }
+  }
+
+  & > *,
+  & > *:link,
+  & > *:visited {
+    @include subtext;
+    text-decoration: none;
+  }
+
+  & > *:hover,
+  & > *:active {
+    color: $color-secondary-xlt;
+  }
+}
+

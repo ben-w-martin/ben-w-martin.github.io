@@ -22,22 +22,19 @@ function BioInfo() {
           </p>
           <br />
           <p className="info__bio--paragraph info__bio--paragraph-4">
-            🤝
-            <strong>BACKEND INTEGRATION</strong>: Seamless integration across
+            🤝 <strong>BACKEND INTEGRATION</strong>: Seamless integration across
             the full stack with technologies like C#, .NET, and SQL, ensuring
             smooth communication and robust functionality.
           </p>
           <br />
           <p className="info__bio--paragraph info__bio--paragraph-5">
-            🧮
-            <strong>DATA NORMALIZATION</strong>: Ensuring data integrity and
+            🧮 <strong>DATA NORMALIZATION</strong>: Ensuring data integrity and
             minimizing redundancy through normalization, optimizing database
             performance and efficiency.
           </p>
           <br />
           <p className="info__bio--paragraph info__bio--paragraph-6">
-            🔎
-            <strong>CURIOSITY</strong>: Understanding how simple logical
+            🔎 <strong>CURIOSITY</strong>: Understanding how simple logical
             principles can ultimately produce amazing digital and technological
             outcomes. Never complacent, but committed to ongoing learning and
             improvement, staying updated on the latest trends and best practices

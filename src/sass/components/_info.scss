@@ -41,6 +41,50 @@
     &-6:hover {
       background-image: linear-gradient(to right, #F10C8B, #f747a8);
     }
+
+    @include respond(phone) {
+      &-2:hover {
+        background-image: none;
+      }
+  
+      &-3:hover {
+        background-image: none;     
+      }
+  
+      &-4:hover {
+        background-image: none;    
+      }
+  
+      &-5:hover {
+        background-image: none;
+        color: $color-white;
+      }
+  
+      &-6:hover {
+        background-image: none;     
+      }
+
+      &-2:active {
+        background-image: linear-gradient(to right, #5672FE, #8397fc);
+      }
+  
+      &-3:active {
+        background-image: linear-gradient(to right, #ad3419, #b75b46);
+      }
+  
+      &-4:active {
+        background-image: linear-gradient(to right, $color-secondary, $color-secondary-lt);
+      }
+  
+      &-5:active {
+        background-image: linear-gradient(to right, #FAD649, #fbe074);
+        color: $color-black;
+      }
+  
+      &-6:active {
+        background-image: linear-gradient(to right, #F10C8B, #f747a8);
+      }
+    }
     
     
     &:not(:first-of-type) {
@@ -55,6 +99,18 @@
       }
       &:active {
         transform: translateY(-.1rem) scale(1.01) rotate(1deg);
+      }
+
+      @include respond(phone) {
+        &:hover {
+          transform: translateY(0) scale(1) rotate(0);
+          padding: 0;
+        }
+        
+        &:active {
+          transform: translateY(0) scale(1) rotate(0);
+          padding: 1rem;
+        }
       }
     }
   }

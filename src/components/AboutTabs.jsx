@@ -1,12 +1,14 @@
 import * as PropTypes from "prop-types";
+import { useState } from "react";
 
 function AboutTabs({ onSwitchTabs, tab }) {
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
   const handleViewPortChange = (e) => {
-    console.log(e);
+    setWindowSize(e.target.innerWidth);
   };
 
-  // const screenWidth = window.screen.availWidth
-  window.screen.addEventListener("change", handleViewPortChange);
+  window.addEventListener("resize", handleViewPortChange);
 
   return (
     <>
@@ -39,7 +41,9 @@ function AboutTabs({ onSwitchTabs, tab }) {
           }
         >
           <label htmlFor="edu" className="tabs__label">
-            <span className="tabs__header heading-tertiary">Edu</span>
+            <span className="tabs__header heading-tertiary">
+              {windowSize > 600 ? "Education" : "Edu"}
+            </span>
           </label>
           <input
             id="edu"
@@ -59,7 +63,9 @@ function AboutTabs({ onSwitchTabs, tab }) {
           }
         >
           <label htmlFor="exp" className="tabs__label">
-            <span className="tabs__header heading-tertiary">Exp</span>
+            <span className="tabs__header heading-tertiary">
+              {windowSize > 600 ? "Experience" : "Exp"}
+            </span>
           </label>
           <input
             id="exp"

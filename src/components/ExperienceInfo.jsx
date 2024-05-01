@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function ExperienceInfo() {
   const [listItems, setListItems] = useState({
@@ -53,13 +54,22 @@ function ExperienceInfo() {
     return item;
   };
 
+  const showMessage = () => {
+    alert(`Page under construction. Coming Soon!`);
+  };
+
   return (
     <>
       <div className="info__box info__exp">
         <div className="u-margin-bottom-md">
-          <h3 className="heading-tertiary u-margin-bottom-sm">
+          <Link
+            disabled
+            to="/"
+            className="heading-tertiary heading-tertiary-link u-margin-bottom-sm"
+            onClick={showMessage}
+          >
             Tabi Technologies
-          </h3>
+          </Link>
           <ul className="info__list">
             <p className="u-margin-bottom-sm">
               <em>

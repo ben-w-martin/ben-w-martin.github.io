@@ -61,7 +61,7 @@ function ExperienceInfo() {
   return (
     <>
       <div className="info__box info__exp">
-        <div className="u-margin-bottom-md">
+        <div className="u-margin-bottom-md u-pos-relative">
           <Link
             disabled
             to="/"

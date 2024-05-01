@@ -41,18 +41,6 @@ function BioInfo() {
             in web development.
           </p>
         </div>
-        {/* <ul className="info__skills--soft-skills">
-          <li className="info__skills--skill">Communication</li>
-          <li className="info__skills--skill">Training & education</li>
-          <li className="info__skills--skill">Creative problem solving</li>
-          <li className="info__skills--skill">Attention to detail</li>
-          <li className="info__skills--skill">Research</li>
-          <li className="info__skills--skill">Leadership</li>
-          <li className="info__skills--skill">Conflict resolution</li>
-          <li className="info__skills--skill">Adaptability</li>
-          <li className="info__skills--skill">Design</li>
-          <li className="info__skills--skill">Discipline</li>
-        </ul> */}
       </div>
     </>
   );

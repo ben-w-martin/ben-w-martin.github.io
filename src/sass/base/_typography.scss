@@ -63,6 +63,12 @@
   }
 }
 
+.heading-section {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 %heading-link-hover {
   text-decoration: underline; 
 }

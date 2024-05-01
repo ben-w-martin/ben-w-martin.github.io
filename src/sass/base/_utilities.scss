@@ -1,3 +1,7 @@
+.u-pos-relative {
+  position: relative;
+}
+
 .u-center-text {text-align: center !important; }
 
 .u-margin-top-lg {margin-top: 8rem !important; }
@@ -45,11 +49,27 @@
   padding: .5rem;
   border-radius: 5px;
   border-bottom: none;
+
+  @include respond(phone) {
+    transform: translateY(0) scale(1);
+    background-image: none;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: none;
+  }
 }
 
 .u-list-item-animation:active {
   filter: brightness(1.3);
   border-bottom: none;
+
+  @include respond(phone) {
+    transform: translateY(.05rem) scale(1.02);
+    background-image: linear-gradient(to right, $color-grey-a-dk, $color-grey-a-lt);
+    padding: .5rem;
+    border-radius: 5px;
+    border-bottom: none;
+  }
 }
 
 .u-underline {

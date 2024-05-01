@@ -1,6 +1,13 @@
 import * as PropTypes from "prop-types";
 
 function AboutTabs({ onSwitchTabs, tab }) {
+  const handleViewPortChange = (e) => {
+    console.log(e);
+  };
+
+  // const screenWidth = window.screen.availWidth
+  window.screen.addEventListener("change", handleViewPortChange);
+
   return (
     <>
       <div className="tabs">
@@ -12,7 +19,7 @@ function AboutTabs({ onSwitchTabs, tab }) {
           }
         >
           <label htmlFor="bio" className="tabs__label">
-            <span className="tabs__header heading-tertiary">bio</span>
+            <span className="tabs__header heading-tertiary">About</span>
           </label>
           <input
             id="bio"
@@ -32,7 +39,7 @@ function AboutTabs({ onSwitchTabs, tab }) {
           }
         >
           <label htmlFor="edu" className="tabs__label">
-            <span className="tabs__header heading-tertiary">Education</span>
+            <span className="tabs__header heading-tertiary">Edu</span>
           </label>
           <input
             id="edu"
@@ -52,7 +59,7 @@ function AboutTabs({ onSwitchTabs, tab }) {
           }
         >
           <label htmlFor="exp" className="tabs__label">
-            <span className="tabs__header heading-tertiary">Experience</span>
+            <span className="tabs__header heading-tertiary">Exp</span>
           </label>
           <input
             id="exp"

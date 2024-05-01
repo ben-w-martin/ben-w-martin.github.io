@@ -929,16 +929,6 @@ body, .text-normal {
     border-right: none;
   }
 }
-.info__bio--paragraph:not(:first-of-type) {
-  transition: all 0.2s;
-  border-radius: 4px;
-}
-.info__bio--paragraph:not(:first-of-type):hover {
-  transform: translateY(-0.1rem) scale(1.03) rotate(0);
-}
-.info__bio--paragraph:not(:first-of-type):active {
-  transform: translateY(-0.1rem) scale(1.01) rotate(1deg);
-}
 .info__bio--paragraph-2:hover {
   background-image: linear-gradient(to right, #5672FE, #8397fc);
 }
@@ -954,6 +944,19 @@ body, .text-normal {
 }
 .info__bio--paragraph-6:hover {
   background-image: linear-gradient(to right, #F10C8B, #f747a8);
+}
+.info__bio--paragraph:not(:first-of-type) {
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+.info__bio--paragraph:not(:first-of-type):hover {
+  transform: translateY(-0.1rem) scale(1.03) rotate(0);
+}
+.info__bio--paragraph:not(:first-of-type):active {
+  transform: translateY(-0.1rem) scale(1.01) rotate(1deg);
+}
+.info__bio--text {
+  position: relative;
 }
 .info__box {
   padding: 0 2rem;

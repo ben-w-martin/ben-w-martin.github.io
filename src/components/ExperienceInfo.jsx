@@ -4,7 +4,6 @@ function ExperienceInfo() {
   const [listItems, setListItems] = useState({
     arrays: [
       [
-        "Startup web application for automating food and beverage orders to eliminate wait times at busy venues.",
         "Engineered robust database structures, tables, stored procedures, and functions using SQL.",
         "Developed RESTful APIs with .NET Core to ensure secure HTTP request routing between client and server.",
         "Created domain and data-annotated request models in ASP.NET for reliable binding and universal type-accuracy.",
@@ -64,8 +63,9 @@ function ExperienceInfo() {
           <ul className="info__list">
             <p className="u-margin-bottom-sm">
               <em>
-                Full Stack Web Developer - Web application for pre-ordering
-                event concessions, enabling fast pickups, and eliminating lines.
+                Full Stack Web Developer - Startup web application for
+                automating food and beverage orders to eliminate wait times at
+                busy venues.
               </em>
             </p>
             {listItems.items[0]}

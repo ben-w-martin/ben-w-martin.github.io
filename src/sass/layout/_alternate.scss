@@ -1,0 +1,23 @@
+.alt {
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, $color-primary, $color-primary-dk);
+    padding: 10rem;
+
+    @include respond(tab-land) {
+        padding: 8rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 4rem;
+    }
+
+    @include respond(phone) {
+        padding: 0;
+    }
+
+    &__container {
+        background-color: $color-black;
+        height: 80vh;
+        box-shadow: $shadow-1;
+    }
+}

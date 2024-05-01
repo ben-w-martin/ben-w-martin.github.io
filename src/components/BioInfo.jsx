@@ -2,7 +2,7 @@ function BioInfo() {
   return (
     <>
       <div className="info__box info__skills">
-        <div className="info__exp--text">
+        <div className="info__bio--text">
           <h3 className="heading-tertiary">Full Stack Software Engineer</h3>{" "}
           <p className="info__bio--paragraph info__bio--paragraph-1">
             specializing in crafting appealing frontends with React and fast and

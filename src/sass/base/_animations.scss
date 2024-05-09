@@ -49,26 +49,3 @@
     opacity: 1;
   }
 }
-
-@keyframes fadeInBottom {
-  0% {
-    height: 0;
-    transform: translateY(-10rem);
-    opacity: 0;
-  }
-  100% {
-    height: 100%;
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}

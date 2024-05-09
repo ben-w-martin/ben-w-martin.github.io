@@ -58,26 +58,6 @@ $break arg choices:
     opacity: 1;
   }
 }
-@keyframes fadeInBottom {
-  0% {
-    height: 0;
-    transform: translateY(-10rem);
-    opacity: 0;
-  }
-  100% {
-    height: 100%;
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 *,
 *::after,
 *::before {
@@ -285,54 +265,8 @@ body, .text-normal {
   text-decoration: underline;
 }
 
-.exp__img-container, .u-list-item:not(:last-of-type) {
+.u-list-item:not(:last-of-type) {
   border-bottom: 1px solid rgba(98, 98, 98, 0.2);
-}
-
-.exp__list--item {
-  position: relative;
-}
-.exp__list--caret {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-}
-.exp__dropdown {
-  background-color: rgba(161, 161, 161, 0.2);
-  width: auto;
-  max-height: 50rem;
-  border-top: 1px solid rgba(98, 98, 98, 0.2);
-  overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  transition: all 1s;
-  animation: fadeInBottom 0.3s;
-}
-.exp__dropdown::-webkit-scrollbar {
-  display: none;
-}
-.exp__dropdown--open {
-  background-color: rgba(98, 98, 98, 0.2);
-}
-.exp__img-container {
-  width: 100%;
-  display: grid;
-  gap: 1rem;
-  padding: 2rem;
-  grid-template-columns: 30% 70%;
-}
-@media only screen and (max-width: 56.25em) {
-  .exp__img-container {
-    grid-template-columns: 1fr;
-  }
-}
-.exp__img-container--img {
-  width: 85%;
-}
-@media only screen and (max-width: 37.5em) {
-  .exp__img-container--img {
-    width: 75%;
-  }
 }
 
 .pill {
@@ -1130,9 +1064,6 @@ body, .text-normal {
     background-color: rgba(98, 98, 98, 0.2);
   }
 }
-.info__list {
-  position: relative;
-}
 .info__list > *:first-child {
   text-align: center;
 }
@@ -1172,18 +1103,8 @@ body, .text-normal {
   background-color: #141414;
   height: 80vh;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-  padding: 6rem;
 }
-@media only screen and (max-width: 75em) {
-  .alt__container {
-    padding: 5rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .alt__container {
-    padding: 4rem;
-  }
-}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to bottom right, #FF4500, #9d3200);

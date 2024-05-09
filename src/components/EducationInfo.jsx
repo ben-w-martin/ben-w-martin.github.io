@@ -7,8 +7,7 @@ function EducationInfo() {
           <div className="info__edu--text ">
             <p>
               <strong>Liberty University</strong>, 2019 - 2022 &rarr; Bachelor
-              of Science
-              <br />
+              of Science in Interdisciplinary Studies. Philosophy minor.{" "}
               <em>Summa cum Laude</em>
             </p>
           </div>

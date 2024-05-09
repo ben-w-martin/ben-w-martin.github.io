@@ -152,6 +152,10 @@
     }
   }
 
+  &__list {
+    position: relative;
+  }
+
   &__list>*:first-child {
     text-align: center;
   }

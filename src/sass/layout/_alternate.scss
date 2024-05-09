@@ -19,5 +19,14 @@
         background-color: $color-black;
         height: 80vh;
         box-shadow: $shadow-1;
+        padding: 6rem;
+
+        @include respond(tab-land) {
+            padding: 5rem;
+        }
+        @include respond(tab-port) {
+            padding: 4rem;
+        }
+        @include respond(phone) {}
     }
 }

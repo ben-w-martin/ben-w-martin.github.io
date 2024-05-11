@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import * as PropTypes from "prop-types";
 import { useState } from "react";
 
@@ -12,10 +12,6 @@ function ExperienceListItem(props) {
     if (props.item?.subcomponent) {
       if (!showDropdown) {
         setShowDropdown(true);
-        setTimeout(() => {
-          dropdown.classList.add("exp__dropdown--open");
-          // Doesn't work on my Mac
-        }, 100);
       } else {
         setTimeout(() => {
           dropdown.style.animation = "fadeOut .3s";
@@ -39,12 +35,12 @@ function ExperienceListItem(props) {
           <FontAwesomeIcon
             className="exp__list--caret"
             key={"icon" + props.index}
-            icon={faCaretDown}
+            icon={showDropdown ? faCaretUp : faCaretDown}
           />
         )}
       </li>
       {props.item?.subcomponent && showDropdown ? (
-        <div className="exp__dropdown">{props.item?.subcomponent}</div>
+        <div className="exp__dropdown exp__dropdown--open">{props.item?.subcomponent}</div>
       ) : (
         <></>
       )}

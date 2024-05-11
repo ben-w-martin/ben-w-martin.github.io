@@ -12,7 +12,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "watch:sass": "sass src/sass/main.scss src/css/style.css -w",
-    "start:css": "npm-run-all --parallel dev watch:sass",
+    "start-dev": "npm-run-all --parallel dev watch:sass",
     "compile:sass": "sass src/sass/main.scss src/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versons' src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "sass src/css/style.prefix.css src/css/style.css --style compressed",

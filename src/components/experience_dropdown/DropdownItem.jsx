@@ -13,7 +13,7 @@ function DropdownItem({item, index}) {
           <div className="exp__img--right">
             <img
               className="exp__img-container--img"
-              src={`src/assets/img/${item.file}`}
+              src={`/public/img/${item.file}`}
               alt={"figure-" + index}
             />
           </div>

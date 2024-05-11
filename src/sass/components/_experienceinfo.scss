@@ -37,9 +37,8 @@
     
 
     &__img {
-    
+
         &-container {
-            width: 100%;
             display: grid;
             gap: 1rem;
             padding: 2rem;
@@ -47,13 +46,15 @@
 
             grid-template-columns: 30% 70%;
             
-            @include respond(tab-port) {
+            @include respond(tab-land) {
                 grid-template-columns: 1fr;
 
             }
 
 
             &--img {
+                border-radius: .5rem;
+                border: 1px solid $color-primary;
                 width: 85%;
 
                 @include respond(phone) {

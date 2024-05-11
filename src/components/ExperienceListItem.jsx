@@ -14,6 +14,7 @@ function ExperienceListItem(props) {
         setShowDropdown(true);
         setTimeout(() => {
           dropdown.classList.add("exp__dropdown--open");
+          // Doesn't work on my Mac
         }, 100);
       } else {
         setTimeout(() => {

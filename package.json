@@ -19,6 +19,8 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "autoprefixer": "^10.4.19",
     "concat": "^1.0.3",
     "gh-pages": "^6.1.1",

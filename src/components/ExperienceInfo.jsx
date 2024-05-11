@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ExperienceListItem } from "./ExperienceListItem";
 import { ListItemDropdown } from "./experience_dropdown/ListItemDropdown";
-import * as options from "../assets/data/experienceInfoData/listItemOptions";
+import * as options from "../data/experienceInfoData/listItemOptions";
 
 //#region EXPERENCE LIST
 

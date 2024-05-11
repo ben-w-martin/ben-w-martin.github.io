@@ -4,6 +4,7 @@
 
         &--item {
             position: relative;
+            
         }
 
         &--caret {
@@ -31,10 +32,10 @@
         &--open {
             background-color: $color-grey-a-dk;
         }
-        
+
     }
 
-    
+
 
     &__img {
 
@@ -45,17 +46,17 @@
             @extend %u-border-bottom;
 
             grid-template-columns: 30% 70%;
-            
-            @include respond(tab-land) {
+
+            @include respond(desktop) {
                 grid-template-columns: 1fr;
 
             }
 
 
             &--img {
+                width: 85%;
                 border-radius: .5rem;
                 border: 1px solid $color-primary;
-                width: 85%;
 
                 @include respond(phone) {
                     width: 75%;

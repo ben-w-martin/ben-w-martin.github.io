@@ -5,8 +5,10 @@ function BioInfo() {
         <div className="info__bio--text">
           <h3 className="heading-tertiary">Full Stack Software Engineer</h3>{" "}
           <p className="info__bio--paragraph info__bio--paragraph-1">
-            specializing in crafting appealing frontends with React and fast and
-            secure backends using C#/.NET and T-SQL.
+            <em>
+              specializing in crafting responsive user interfaces with React and fast and
+              secure backends using C#/.NET and T-SQL.
+            </em>
           </p>
           <br />
           <p className="info__bio--paragraph info__bio--paragraph-2">

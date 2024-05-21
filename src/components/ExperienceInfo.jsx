@@ -1,79 +1,6 @@
 import { useEffect, useState } from "react";
 import { ExperienceListItem } from "./ExperienceListItem";
-import { ListItemDropdown } from "./experience_dropdown/ListItemDropdown";
-import * as options from "../data/experienceInfoData/listItemOptions";
-
-//#region EXPERENCE LIST
-
-  const experienceList = [
-  [
-    {
-      string:
-        "Engineered robust database structures, tables, stored procedures, and functions using SQL.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Developed RESTful APIs with .NET Core to ensure secure HTTP request routing between client and server.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Created domain and data-annotated request models in ASP.NET for reliable binding and universal type-accuracy.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Implemented third party component libraries such as Formik, Yup, and React Google Maps to create powerful User Interfaces with type-safe input capabilities.",
-      subcomponent: (
-        <ListItemDropdown key="dropdown-Forms" options={options.tabiVenues} />
-      ),
-    },
-    {
-      string:
-        "Contributed to Agile environment through daily stand-ups, code reviews, and code talks.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Collaborated on production efforts through Git and GitHub version control services, merge conflict resolution, and clear communication with senior developers.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Provided meaningful feedback on Pull Requests to improve upon adherence to development standards and industry best practices.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Produced roles-based user profiles with tailored access and content management capabilities.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Leveraged data structures and algorithms to conform API response objects to custom formats, creating a richer functionality and user experience.",
-      subcomponent: null,
-    },
-  ],
-  [
-    {
-      string:
-        "Provided clinical behavioral health support and education while deployed in a combat zone.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Utilized electronic healthcare systems to conduct excellent patient care with detailed technical notes and documentation.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Designed digital graphics, content, and promotional media for marketing events and clinical services.",
-      subcomponent: null,
-    },
-  ],
-];
-//#endregion
+import experienceList from "../data/experienceList";
 
 function ExperienceInfo() {
   const [listItems, setListItems] = useState({
@@ -118,6 +45,25 @@ function ExperienceInfo() {
   return (
     <>
       <div className="info__box info__exp">
+      <div className="u-margin-bottom-md u-pos-relative">
+          <h3
+            disabled
+            to="/"
+            className="heading-tertiary u-margin-bottom-sm"
+          >
+            Veterans&apos; Fall-In Hackathon
+          </h3>
+          <div className="info__exp--text">
+            <ul className="info__list">
+              <p className="u-margin-bottom-sm">
+                <em>
+                  Front End Developer - Web application for planning stargazing trips using real-time and predictive space data.
+                </em>
+              </p>
+              {listItems.items[0]}
+            </ul>
+          </div>
+        </div>
         <div className="u-margin-bottom-md u-pos-relative">
           <h3
             disabled
@@ -135,7 +81,7 @@ function ExperienceInfo() {
                   busy venues.
                 </em>
               </p>
-              {listItems.items[0]}
+              {listItems.items[1]}
             </ul>
           </div>
         </div>
@@ -148,7 +94,7 @@ function ExperienceInfo() {
               <p className="u-margin-bottom-sm">
                 <em>Behavioral Health Specialist</em>
               </p>
-              {listItems.items[1]}
+              {listItems.items[2]}
             </ul>
           </div>
         </div>

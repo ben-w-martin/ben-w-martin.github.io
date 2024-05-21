@@ -16,7 +16,10 @@ function EducationInfo() {
           <h3 className="heading-tertiary">Certificates</h3>
           <div className="info__edu--text">
             <p>
-              <strong>Udemy</strong>, 2023 &rarr; Advanced CSS & Sass
+              <strong>Google</strong>, 2024 &rarr; Foundations of Cybersecurity
+            </p>
+            <p>
+              <strong>Udemy</strong>, 2024 &rarr; Advanced CSS & Sass
             </p>
           </div>
         </div>

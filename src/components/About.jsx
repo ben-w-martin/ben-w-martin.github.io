@@ -26,12 +26,6 @@ function About() {
             {tab.current === "bio" && <BioInfo />}
             {tab.current === "edu" && <EduInfo />}
             {tab.current === "exp" && <ExpInfo />}
-
-            {/* <div className="cta">
-              <a className="btn btn__proj">
-                View my projects <span className="btn__arrow">&rarr;</span>
-              </a>
-            </div> */}
           </div>
         </div>
       </div>

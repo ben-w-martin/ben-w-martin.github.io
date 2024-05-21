@@ -51,7 +51,7 @@ function ExperienceInfo() {
             to="/"
             className="heading-tertiary u-margin-bottom-sm"
           >
-            Veterans&apos; Fall-In Hackathon
+            Veteran Fall-In Hackathon
           </h3>
           <div className="info__exp--text">
             <ul className="info__list">

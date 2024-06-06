@@ -45,19 +45,27 @@ function ExperienceInfo() {
   return (
     <>
       <div className="info__box info__exp">
-      <div className="u-margin-bottom-md u-pos-relative">
-          <h3
-            disabled
-            to="/"
-            className="heading-tertiary u-margin-bottom-sm"
-          >
-            Veteran Fall-In Hackathon
-          </h3>
+        <div className="u-margin-bottom-md u-pos-relative">
+          <div className="exp__heading heading-tertiary">
+            <h3
+              disabled
+              to="/"
+              className="heading-tertiary u-margin-bottom-sm"
+              >
+              Daughters App
+            </h3>
+            <h3 className="exp__heading--date">
+              May &apos;24 - Present
+            </h3>
+          </div>
           <div className="info__exp--text">
             <ul className="info__list">
               <p className="u-margin-bottom-sm">
                 <em>
-                  Front End Developer - Web application for planning stargazing trips using real-time and predictive space data.
+                  <strong>
+                  Back End Engineer
+                  </strong> 
+                 {" "}(part-time, contract) - Faith-based ios and Android app.
                 </em>
               </p>
               {listItems.items[0]}
@@ -65,18 +73,26 @@ function ExperienceInfo() {
           </div>
         </div>
         <div className="u-margin-bottom-md u-pos-relative">
-          <h3
-            disabled
-            to="/"
-            className="heading-tertiary u-margin-bottom-sm"
-          >
-            Tabi Technologies
-          </h3>
+          <div className="exp__heading heading-tertiary">
+            <h3
+              disabled
+              to="/"
+              className="heading-tertiary u-margin-bottom-sm"
+              >
+              Tabi Technologies
+            </h3>
+            <h3 className="exp__heading--date">
+              Jan &apos;24 - May &apos;24
+            </h3>
+          </div>
           <div className="info__exp--text">
             <ul className="info__list">
               <p className="u-margin-bottom-sm">
                 <em>
-                  Full Stack Web Developer - Startup web application for
+                  <strong>
+                    Full Stack Web Developer
+                  </strong>
+                  {" "}(full-time, contract) - Startup web application for
                   automating food and beverage orders to eliminate wait times at
                   busy venues.
                 </em>
@@ -85,16 +101,53 @@ function ExperienceInfo() {
             </ul>
           </div>
         </div>
-        <div>
-          <h3 className="heading-tertiary u-margin-bottom-sm">
-            U. S. Army Reserve
-          </h3>
+        <div className="u-margin-bottom-md u-pos-relative">
+          <div className="exp__heading heading-tertiary">
+            <h3 className="u-margin-bottom-sm">
+              U. S. Army Reserve
+            </h3>
+            <h3 className="exp__heading--date">
+              July &apos;20 - Present
+            </h3>
+          </div>
           <div className="info__exp--text">
             <ul className="info__list">
               <p className="u-margin-bottom-sm">
-                <em>Behavioral Health Specialist</em>
+                <em>
+                  <strong>
+                    Behavioral Health Specialist
+                  </strong>
+                </em>
               </p>
               {listItems.items[2]}
+            </ul>
+          </div>
+        </div>
+        <div className="u-margin-bottom-md u-pos-relative">
+          <div className="exp__heading heading-tertiary">
+            <h3
+              disabled
+              to="/"
+              className=" u-margin-bottom-sm"
+              >
+              Veteran Fall-In Hackathon
+            </h3>
+            <h3 className="exp__heading--date">
+              May &apos;24
+            </h3>
+          </div>
+          <div className="info__exp--text">
+            <ul className="info__list">
+              <p className="u-margin-bottom-sm">
+                <em>
+                  <strong>
+                    Front End Developer  
+                  </strong>
+                  {" "}
+                  {/* <a href="#">View live sight</a> */}
+                </em>
+              </p>
+              {listItems.items[3]}
             </ul>
           </div>
         </div>

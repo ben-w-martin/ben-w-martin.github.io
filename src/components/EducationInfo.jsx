@@ -16,7 +16,7 @@ function EducationInfo() {
           <h3 className="heading-tertiary">Certificates</h3>
           <div className="info__edu--text">
             <p>
-              <strong>Google</strong>, 2024 &rarr; Foundations of Cybersecurity
+              <strong>Google</strong>, 2024 &rarr; Cybersecurity Professional (In progress)
             </p>
             <p>
               <strong>Udemy</strong>, 2024 &rarr; Advanced CSS & Sass

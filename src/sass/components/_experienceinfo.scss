@@ -1,5 +1,19 @@
 .exp {
 
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+        
+        &--date {
+            font-weight: 100;
+            font-size: 75% !important;
+        }
+    }
+
     &__list {
 
         &--item {

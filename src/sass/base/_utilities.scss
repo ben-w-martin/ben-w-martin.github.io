@@ -36,26 +36,27 @@
 .u-list-item {
   list-style: none;
   transition: all .2s;
+  padding: 1.5rem .75rem;
 
   &:not(:last-of-type) {
     @extend %u-border-bottom;
   }
-
 }
 
 .u-list-item-animation:hover {
   transform: translateY(.05rem) scale(1.02);
   background-image: linear-gradient(to right, $color-grey-a-dk, $color-grey-a-lt);
-  padding: .5rem;
   border-radius: 5px;
-  border-bottom: none;
+  border-bottom: 2px solid $color-primary !important;
 
   @include respond(phone) {
     transform: translateY(0) scale(1);
     background-image: none;
-    padding: 0;
     border-radius: 0;
-    border-bottom: none;
+  }
+
+  @include respond(tab-port) {
+    border-bottom: none !important;
   }
 }
 
@@ -66,14 +67,18 @@
   @include respond(phone) {
     transform: translateY(.05rem) scale(1.02);
     background-image: linear-gradient(to right, $color-grey-a-dk, $color-grey-a-lt);
-    padding: .5rem;
     border-radius: 5px;
     border-bottom: none;
   }
 }
 
 .u-underline {
-  text-decoration: underline;
+  transition: all .3s;
+
+  @include respond(tab-port) {
+    border-bottom: 2px solid $color-primary;
+  }
+
 }
 
 %u-border-bottom {

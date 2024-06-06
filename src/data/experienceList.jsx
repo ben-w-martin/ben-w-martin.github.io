@@ -5,24 +5,9 @@ const experienceList = [
   [
     {
       string:
-        "Developed application that renders information about space objects visible at a given location.",
-      subcomponent: <ListItemDropdown options={options.spaceProject} / >,
-    },
-    {
-      string:
-        "Collaborated with designer to develop Figma mockup into a responsive user interface with React and Vite.",
+        "Created scalable Cloud Functions in Firebase, optimizing system performance and enabling seamless expansion to support future growth and increasing user demands.",
       subcomponent: null,
-    },
-    {
-      string:
-        "Incorporated mathematical formulas into application logic to display direction, distance between client location and space objects.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Leveraged Artificial Intelligence to increase workflow efficiency, eliminate redundant processes.",
-      subcomponent: null,
-    },
+    }
   ],
   [
     {
@@ -76,20 +61,27 @@ const experienceList = [
   [
     {
       string:
-        "Provided clinical behavioral health support and education while deployed in a combat zone.",
+        "Scored in the 98th percentile on the Armed Services Vocational Aptitude Battery (ASVAB) test.",
       subcomponent: null,
     },
     {
       string:
-        "Utilized electronic healthcare systems to conduct excellent patient care with detailed technical notes and documentation.",
-      subcomponent: null,
-    },
-    {
-      string:
-        "Designed digital graphics, content, and promotional media for marketing events and clinical services.",
+        "Used electronic healthcare systems to maintain HIPAA compliance on overseas deployment, ensuring confidentiality, integrity, and availability of patient information, resulting in Army Commendation and Army Achievement Medals.",
       subcomponent: null,
     },
   ],
+  [
+    {
+      string:
+        "Developed web application that leverages APIs to plan stargazing trips using real-time space data.",
+      subcomponent: <ListItemDropdown options={options.spaceProject} />,
+    },
+    {
+      string:
+        "Used mathematical formulas in code to leverage geographical data to create smart features.",
+      subcomponent: null,
+    }
+  ]
 ];
 
 export default experienceList;

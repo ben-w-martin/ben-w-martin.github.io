@@ -61,7 +61,7 @@ const experienceList = [
   [
     {
       string:
-        "Scored in the 98th percentile on the Armed Services Vocational Aptitude Battery (ASVAB) test.",
+        "Scored in the 98th percentile on the Armed Services Vocational Aptitude Battery (ASVAB).",
       subcomponent: null,
     },
     {

@@ -22,7 +22,6 @@ function ListItemDropdown({ options }) {
   }, [options]);
 
   const mapOptions = (item, i) => {
-    console.log(item.string);
     return <DropdownItem item={item} index={i}/>
   };
   return <>{items.components}</>;
